@@ -20,8 +20,7 @@ script:
     - ls -ltra
     - make multilingual-html
 after_success:
-    - cd build
     - ls -ltra
-    - git add -A
+    - git add build
     - git commit -m 'Update'
     - '[ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ] && [ $GH_TOKEN ] && git push -f --quiet https://$GH_TOKEN@github.com/ksk-uchi/ghp_test.git gh-pages'
