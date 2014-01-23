@@ -19,7 +19,7 @@ before_script:
 script:
     - make multilingual-html
     - mv build ../
-    - git sympolic-ref HEAD refs/heads/gh-pages
+    - git symbolic-ref HEAD refs/heads/gh-pages
     - rm .git/index
     - git clean -fdx
     - mv ../build ./
