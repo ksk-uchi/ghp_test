@@ -16,7 +16,7 @@ script:
     - make multilingual-html
     - mv build ../
     - git checkout gh-pages
-    - mv ../build ./
+    - mv -f ../build ./
     - touch .nojekyll
 after_success:
     - git add .
