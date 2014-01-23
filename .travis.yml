@@ -16,15 +16,15 @@ before_script:
     - git clone --quiet https://github.com/ksk-uchi/ghp_test.git ghp_test
     - git branch
     - cd ghp_test
-    - git checkout -b gh-pages
-    - git branch
 script:
-    - ls -ltra
     - make multilingual-html
+    - mv build ../
+    - git sympolic-ref HEAD refs/heads/gh-pages
+    - rm .git/index
+    - git clean -fdx
+    - mv ../build ./
+    - touch .nojekyll
 after_success:
-    - ls -ltra
-    - git status
-    - git add ./build
-    - git status
-    - git commit -m 'Update'
+    - git add .
+    - git commit -m "UPDATE DOCUMENTATION BY TRAVIS"
     - '[ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ] && [ $GH_TOKEN ] && git push -f --quiet https://$GH_TOKEN@github.com/ksk-uchi/ghp_test.git gh-pages'
