@@ -30,7 +30,7 @@ msgid ""
 "specific reStructuredText used to create these examples."
 msgstr ""
 "これはSphinx用Bootstrapスタイルの事例集です。"
-"実際にこのページの`ソース <./_sources/examples.txt>`_ を確認することで、"
+"実際にこのページの`ソース <./_sources/examples.txt>`__ を確認することで、"
 "どのように見た目が実現されているのかを知ることが可能です。"
 
 # 719825637bbc46c3920ce39604f8d717
