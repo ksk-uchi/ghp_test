@@ -1,14 +1,14 @@
-# Japanese translations for Gengo API Documentation package.
-# Copyright (C) 2008-2014 Gengo, Inc
-# This file is distributed under the same license as the Gengo API Documentation package.
+# Japanese translations for ksk test package.
+# Copyright (C) 2008-2014 ksk
+# This file is distributed under the same license as the ksk test package.
 # Automatically generated, 2014.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Gengo API Documentation \n"
+"Project-Id-Version: ksk test \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-24 09:41\n"
-"PO-Revision-Date: 2014-01-20 12:00\n"
+"POT-Creation-Date: 2014-01-24 11:31\n"
+"PO-Revision-Date: 2014-01-24 11:30\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: ja\n"
@@ -17,117 +17,114 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-# 7796d65ff60f48559c42be35236b3fbd
+# 64a8038588c3468eb6bd840feda85b1e
 #: ../../source/example.rst:3
 msgid "Examples"
-msgstr "事例"
+msgstr ""
 
-# 7d18eedfd027470d9760f5c026b781bd
+# 53004f4337f247329f9f53305bfb6b9d
 #: ../../source/example.rst:5
 msgid ""
 "Various examples of Bootstrap styling applied to Sphinx constructs. You can "
 "view the `source <./_sources/examples.txt>`_ of this page to see the "
 "specific reStructuredText used to create these examples."
 msgstr ""
-"これはSphinx用Bootstrapスタイルの事例集です。"
-"実際にこのページの`ソース <./_sources/examples.txt>`_ を確認することで、"
-"どのように見た目が実現されているのかを知ることが可能です。"
 
-# 719825637bbc46c3920ce39604f8d717
+# e262acb904ae47818fa6e1d1ed79289a
 #: ../../source/example.rst:9
 msgid "this is test"
-msgstr "これはテストです"
+msgstr ""
 
-# f525b9948e704e2a8d2e9145ce695d69
+# ef6844546da04d1582cf73258241f642
 #: ../../source/example.rst:12
 msgid "Headings"
-msgstr "段落見出し"
+msgstr ""
 
-# 54ded066775e413fb12d2535611cbf25
+# 4234eb891ae34e02b9dfc5a584870ce5
 #: ../../source/example.rst:13
 msgid "This is a first level heading (``h1``)."
-msgstr "これは第一見出しレベルです。"
+msgstr ""
 
-# 9bee8d1dbb3349e7aa99ac546c32758c
+# 9818539f04c9424084c05b849e13b6c8
 #: ../../source/example.rst:16
 msgid "Sub-Heading"
-msgstr "副見出し"
+msgstr ""
 
-# f383b0841b37405d939fe1179532b397
+# e4d553835e5843c2953ab21457f5f6f3
 #: ../../source/example.rst:17
 msgid "This is a second level heading (``h2``)."
-msgstr "これは第二見出しレベルです。"
+msgstr ""
 
-# 24f7c1e2ab734669add4850835311cf6
+# dae77719efba4e3785af371e2afc4728
 #: ../../source/example.rst:20
 msgid "Sub-Sub-Heading"
-msgstr "副々見出し"
+msgstr ""
 
-# df1136e3cc04425791390de081fd2e79
+# 8aaf688fbfbf4703858a7bf337de9948
 #: ../../source/example.rst:21
 msgid "This is a third level heading (``h3``)."
-msgstr "これは第三見出しレベルです。"
+msgstr ""
 
-# 987422f5266f46a0a56d5cf47d8672e8
+# 44006bffd6f04f0ca85dbf01622f06ab
 #: ../../source/example.rst:25
 msgid "Code"
-msgstr "コード"
+msgstr ""
 
-# a032d92e60fc4cc8ad73ceb5dfaa5361
+# 9b29aa54204e48438661ff28f8a3ab62
 #: ../../source/example.rst:26
 msgid ""
 "The Sphinx Bootstrap Theme uses Bootstrap styling for ``inline code text`` "
 "and ::"
 msgstr ""
 
-# ade674ed0dce47d1bc1fa65f9bb469c5
+# 8c0f05edaf7441389b84b7351f3cf6bd
 #: ../../source/example.rst:32
 msgid "Here's an included example with line numbers."
 msgstr ""
 
-# 801a5497755748f49d4da8603e16fa9a
+# ae2c1dd379cc48bbb63ff2be82440ad5
 #: ../../source/example.rst:37
 msgid "It also works with existing Sphinx highlighting:"
 msgstr ""
 
-# a6ef5d0fd32f46bf9956cc167bfcff00
+# e91a0bfbe94c4e0eb85df9573fc3115c
 #: ../../source/example.rst:62
 msgid "Admonitions"
 msgstr ""
 
-# af869c8a79ca41a098ef36a599e7d58d
+# 2268384e0fe349458d4e8b18d6430468
 #: ../../source/example.rst:63
 msgid ""
 "The Sphinx Bootstrap Theme uses the Bootstrap ``alert`` classes for Sphinx "
 "admonitions."
 msgstr ""
 
-# af3502ffabc24b1e933b30463ba16bdc
+# 9dfade6c006c483a934b12e145a8ac11
 #: ../../source/example.rst:67
 msgid "Note"
 msgstr ""
 
-# da34291530634f249f8c3b659105584c
+# f3710511ca8c4a10a7473600c073b7c6
 #: ../../source/example.rst:68
 msgid "This is a note."
 msgstr ""
 
-# 10ee5678e4634e43a354f91ea21f6f5c
+# f3b1fc9f9ab54c0080112c4bc76e0b99
 #: ../../source/example.rst:71
 msgid "Warning"
 msgstr ""
 
-# 7c879e35c01a41f5aec469c9fa6c09b5
+# c0a7a1790c0a4e69a9791f8f46b7823a
 #: ../../source/example.rst:72
 msgid "This is a warning."
 msgstr ""
 
-# dafe18667dde441bba059667f8cffdc0
+# b87712cb758a4305b42e13bdb24194c2
 #: ../../source/example.rst:92
 msgid "Tables"
 msgstr ""
 
-# 1f0109c35ae546deb9a76e27136a1794
+# b549f971fbce4973a83d8db0f073049b
 #: ../../source/example.rst:93
 msgid ""
 "Here are some examples of Sphinx `tables <http://sphinx-doc.org/rest."
@@ -137,153 +134,153 @@ msgid ""
 "directive, as demonstrated in the following tables."
 msgstr ""
 
-# 1b4749cdf9ba4f2c8af2499f6463b604
+# 33fb1ab94427445a8f453b93fc8a38a9
 #: ../../source/example.rst:101
 msgid "Grid"
 msgstr ""
 
-# 6d80596937fb4713bf1a08698de76733
+# 577ce6a8ebf54925806f9ed23cc4a007
 #: ../../source/example.rst:102
 msgid "A \"**bordered**\" grid table:"
 msgstr ""
 
-# b3ca57b4e615450580b42e3b34daaa2f
+# 014b070390e346a191ce0e08620c97e6
 #: ../../source/example.rst:107
 msgid "Header1"
 msgstr ""
 
-# bf1d1f9a551c43939dbdcbb9505ba74c
+# 95fcfc39393f485eb84bd2218e5f255b
 #: ../../source/example.rst:107
 msgid "Header2"
 msgstr ""
 
-# d4fb7eab485b4448aaa460a58e5659a4
+# 7799e378228548d28f97a4173c95bfef
 #: ../../source/example.rst:107
 msgid "Header3"
 msgstr ""
 
-# f106d5c85569454a8bdc2e34427eba6c
+# 57d693da636a4bb5a2b9acc37fb73e3a
 #: ../../source/example.rst:107
 msgid "Header4"
 msgstr ""
 
-# cfe78ebb9e2841c5b2d3c52bfb0c65e2
+# 0702ca62d8a84a2198c2c5635c6fa08f
 #: ../../source/example.rst:109
 msgid "row1, cell1"
 msgstr ""
 
-# 6a95d7916b034725903791d233044d48
-# 0635b0ff2a3742ed82c3a706fdfb690f
-# 6021ed629caa43ce86d370dd308dc957
+# a6e884fd211e4bf99ff04fffcfd6de09
+# 2a61238bf3214aabb0ebac9a6c4448b0
+# ff6b035865724998b4acfa1b60656cdb
 #: ../../source/example.rst:109 ../../source/example.rst:129
 #: ../../source/example.rst:145
 msgid "cell2"
 msgstr ""
 
-# 98ed64dbc84345c79521918c817101b5
-# 5fb7d3d369ee486890291776a2c5451a
-# 24568cc3646d4eecbd9fbab6d580935f
+# 062a5c4d3bd14a9d82bffe89dd10d83a
+# b6de90e6785947c197f2155e5121e20f
+# a5ae3d9266be4ee4b06165a6c2439205
 #: ../../source/example.rst:109 ../../source/example.rst:129
 #: ../../source/example.rst:145
 msgid "cell3"
 msgstr ""
 
-# ace1f6796fdd478d82f64a6817de816c
+# 083735d1a0004137a2493d4ecf5971a1
 #: ../../source/example.rst:109
 msgid "cell4"
 msgstr ""
 
-# b82c1778ca1442dd8f4d53076a4123cc
+# a14ae4cbe9f042719994c0080e0c977c
 #: ../../source/example.rst:111
 msgid "row2 ..."
 msgstr ""
 
-# ba34d2dcc2dc4624bb58949df1b8fe9c
-# 31106e90b28645aebce74561a3e3eb1c
-# a3084f0eb98448ef9f1070d3ea4eb06b
-# 9efcf24da80f47dfb272ad2bab7f41da
-# 4c6c60ab3b5d45438fb25fe19ed2ce35
-# 8f359f5ecd7647ca8c3da390057d241c
-# 15c0a11202e449c682ca924ab97cf3d0
-# 2b7a8a2b797f428eafb4ecef6767f66c
-# 9069f2c520e748878970a6fd6b17c42c
-# a993be9407244300800bea80d92916ae
-# 957c8d5730e84952bf99e270d4bdc461
-# 6681cc65f7644e2283e02e2ce7cd4c13
-# d7000b9b50724f749d813c9f7f8ae8e6
-# fa1bacd2348548fa9e4f67eeca447c4b
-# f60feaaaa86a4a8e91eb214fdc4cc9eb
-# 91b3ea2bb59048ae814b867cb7c87190
-# 60dca043ede14f84a9fb11dd8e291768
+# fe570305859e4447bd195d32a2fbcf26
+# 29e8120b9cbf4137b8ebf36bac478cca
+# 5faf42610c1a4c94a68cc316a907bead
+# 3ac79aad21f94b74951c4e03e1f6bace
+# f9b8785874ec49e9b334b0e297dba686
+# 2790273d6a3548499fbad31c5c75b562
+# 781c29bf66eb45a889bf1eb3375b3c52
+# 06cb6bb5b1644b1985ebf651694980b5
+# 3ffe6294cf1241daabf21efcd327c072
+# 6eb6090b9a054a4f9f1807d91d7576f5
+# 993f0b4a94f64fb9b6e9f696a80f4019
+# 00b7fe10024d415ca16570907490bbb7
+# 6b02c3e062c842f4a08686209cef9c99
+# 3b468409fdd3471cb54e3cfb3be3cc3c
+# 0bb28710203b405f9c7be6b65494c08e
+# b0b1f7bcb89b456398460e47b1656566
+# 058facdf1692443b90935fbf769b10dc
 #: ../../source/example.rst:111 ../../source/example.rst:113
 #: ../../source/example.rst:130 ../../source/example.rst:131
 #: ../../source/example.rst:146 ../../source/example.rst:147
 msgid "..."
 msgstr ""
 
-# 3ba1e0777582490889a42d41975f7438
-# 695bd1d0c327466292ac783526ebe55d
-# b5e2a41afa864e5185e25f9945bbab88
+# cdd5eceabfbb41ab8cc40aedf6efcd6e
+# 12ae7db9a4924f7cb439958b8a7acc7b
+# 273c4d8cc9f74f0c9cc4a39caae4c373
 #: ../../source/example.rst:116 ../../source/example.rst:134
 #: ../../source/example.rst:150
 msgid "which uses the directive::"
 msgstr ""
 
-# 963a4ec456fa4deaa36b9824a01b8443
+# 3861d9ec04744cc6806b4d76b456158b
 #: ../../source/example.rst:121
 msgid "Simple"
 msgstr ""
 
-# 6e77a8678e474647b691f2de2d77c80e
+# 8475a84517d342a18e0ab2644ad4462c
 #: ../../source/example.rst:122
 msgid "A simple \"**striped**\" table:"
 msgstr ""
 
-# bae4ce474be54ef8996247d77e6fba8e
-# 2a48c3e1c4f24f4e98c1eedd816f7186
+# 036c93588fb64379a755b6f6ae9cf026
+# 59716b5fe4c04b6c9c884f538407592c
 #: ../../source/example.rst:127 ../../source/example.rst:143
 msgid "H1"
 msgstr ""
 
-# bd459e354ff045d6a17be30a887bb256
-# 5c05caeebddb4712b54731a79d0a398c
+# 4b60216c7b8944228c4144264e085798
+# f0c9d918cf6644da83b69416f4444ce9
 #: ../../source/example.rst:127 ../../source/example.rst:143
 msgid "H2"
 msgstr ""
 
-# ce87f1c9e8594f64b867b3e9dda15ab0
-# f394c7272ba34d46b2cd7f520c17b9bf
+# 9b283d1bd564446f8ba50099babff14a
+# cc4848f08c9d48eb9f7bf29f2cbc158b
 #: ../../source/example.rst:127 ../../source/example.rst:143
 msgid "H3"
 msgstr ""
 
-# 8a23f00a33714290ad454a1d4efdf5bc
-# 9add6775bdbe42a6bbd965c50f0c47c3
+# af68d367bfd740d291ebdab05bda6409
+# e5f6103eb7024b2ab8a986ef333c7e7f
 #: ../../source/example.rst:129 ../../source/example.rst:145
 msgid "cell1"
 msgstr ""
 
-# d90504e190024aadbaca12e418c1e802
+# 93dbc0c953874b5db20807aaaecebb74
 #: ../../source/example.rst:138
 msgid "And a \"**hoverable**\" table:"
 msgstr ""
 
-# 27104a5441534041bf6ff2abfb308922
+# de027cb5858e4ef8a8045f8fa8ea37fc
 #: ../../source/example.rst:155
 msgid "Code Documentation"
 msgstr ""
 
-# 42e2fb7e14cb44c192bd491a891a438f
+# a887737b2d5b41b8a8a1964eb35197a7
 #: ../../source/example.rst:157
 msgid "An example Python function."
 msgstr ""
 
-# 15bb13e2f2084115901c82e5ccc287f5
+# b23ae39ffd9c476a8ac1b72fabc37d20
 #: ../../source/example.rst:161
 msgid "Format the exception with a traceback."
 msgstr ""
 
-# ea0bb898659740baaadaa42a928915fd
+# 636cec6271ef41a2a97c4a09bed03753
 #: ../../source/example.rst:170
 msgid "An example JavaScript function."
 msgstr ""

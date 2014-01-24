@@ -1,14 +1,14 @@
-# Japanese translations for project_name package.
-# Copyright (C) 2013, your name
-# This file is distributed under the same license as the project_name package.
-# Automatically generated, 2013.
+# Japanese translations for ksk test package.
+# Copyright (C) 2008-2014 ksk
+# This file is distributed under the same license as the ksk test package.
+# Automatically generated, 2014.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: project_name 1\n"
+"Project-Id-Version: ksk test \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-24 09:41\n"
-"PO-Revision-Date: 2013-08-03 19:32\n"
+"POT-Creation-Date: 2014-01-24 11:31\n"
+"PO-Revision-Date: 2014-01-24 11:30\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: ja\n"
@@ -17,22 +17,21 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-# 29a3049d0ff14d78b04d0f45cdd0d502
+# f84d1c5428e6476cbb60fd4a2ec18c83
 #: ../../source/index.rst:6
 msgid "KSK gh-pages"
-msgstr ""
+msgstr "KSK ページ"
 
-# 0e5f1c1a18ec483a9055c9d12059a268
-#: ../../source/index.rst:9
+# 3429cab8a8ce4643a9d9ad9f2577aeec
+#: ../../source/index.rst:8
+msgid "we love `gengo <http://gengo.com>`__ very much."
+msgstr "我々は `gengo <http://gengo.com>`__ を応援しています。"
+
+# 3ca03e0f8c68458aac406c65a8f3aa39
+#: ../../source/index.rst:10
 msgid ""
 "This is just a test for gh-pages This is just a test for gh-pages This is "
 "just a test for gh-pages This is just a test for gh-pages"
 msgstr ""
-
-# 1981077b5a094c039e5c9903d813cf32
-#~ msgid "Welcome to Sphinx!"
-#~ msgstr "Sphinxへようこそ！"
-
-# d9b3a48e640f492688952dbce6fe820d
-#~ msgid "index"
-#~ msgstr "index"
+"これはgh-pagesのテストです。これはgh-pagesのテストです。これはgh-pagesのテストです。"
+"これはgh-pagesのテストです。これはgh-pagesのテストです。"
