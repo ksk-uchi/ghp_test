@@ -14,6 +14,7 @@ endif
 
 # Internal variables.
 ENSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) -D language=en -A lang=en source
+JASPHINXOPTS   = -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) -D language=ja -A lang=ja source
 # the i18n builder cannot share the environment and doctrees with the others
 I18NSPHINXOPTS  = $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) source
 
@@ -26,4 +27,6 @@ help:
 multilingual-html:
 	rm -rf $(BUILDDIR)/*
 	$(SPHINXBUILD) -b gettext $(I18NSPHINXOPTS) $(BUILDDIR)/locale
+	cd source; sphinx-gettext-helper -p ../$(BUILDDIR)/locale --update --build --statistics -l ja
 	$(SPHINXBUILD) -b html $(ENSPHINXOPTS) $(BUILDDIR)/html/en
+	$(SPHINXBUILD) -b html $(JASPHINXOPTS) $(BUILDDIR)/html/ja

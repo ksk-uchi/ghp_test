@@ -1,0 +1,38 @@
+# Japanese translations for project_name package.
+# Copyright (C) 2013, your name
+# This file is distributed under the same license as the project_name package.
+# Automatically generated, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: project_name 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-01-24 09:41\n"
+"PO-Revision-Date: 2013-08-03 19:32\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# 29a3049d0ff14d78b04d0f45cdd0d502
+#: ../../source/index.rst:6
+msgid "KSK gh-pages"
+msgstr ""
+
+# 0e5f1c1a18ec483a9055c9d12059a268
+#: ../../source/index.rst:9
+msgid ""
+"This is just a test for gh-pages This is just a test for gh-pages This is "
+"just a test for gh-pages This is just a test for gh-pages"
+msgstr ""
+
+# 1981077b5a094c039e5c9903d813cf32
+#~ msgid "Welcome to Sphinx!"
+#~ msgstr "Sphinxへようこそ！"
+
+# d9b3a48e640f492688952dbce6fe820d
+#~ msgid "index"
+#~ msgstr "index"

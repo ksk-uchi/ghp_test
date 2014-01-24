@@ -1,0 +1,2552 @@
+# Japanese translations for Gengo API Documentation package.
+# Copyright (C) 2008-2014 Gengo, Inc
+# This file is distributed under the same license as the Gengo API Documentation package.
+# Automatically generated, 2014.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Gengo API Documentation \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-01-21 13:52\n"
+"PO-Revision-Date: 2014-01-20 14:16\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# 0e327697bb3a4e668f70ebae68313efb
+#: ../../source/overview.rst:3
+msgid "Gengo API v2 Overview"
+msgstr ""
+
+# 2d7ee310664a409982910d0934526276
+#: ../../source/overview.rst:10
+msgid "Translation flow"
+msgstr ""
+
+# 3e511a7ab4fe42a0a82580f0fa0cb618
+#: ../../source/overview.rst:12
+msgid ""
+"The Gengo API allows you to connect your app to Gengo, and order human "
+"translation without needing to use a manual web interface. Because human "
+"translation is not instant, our API is asynchronous (a bit like `Mechanical "
+"Turk <http://mturk.com>`__). This means that unlike some other web APIs like "
+"`Flickr <http://flickr.com>`__ or `Twitter <http://twitter.com>`__, you need "
+"to allow time for translators to complete their translations."
+msgstr ""
+
+# a89011e2aa444861bea9e6bb266ab4db
+#: ../../source/overview.rst:21
+msgid "What happens behind the scenes"
+msgstr ""
+
+# 152943ea7fb9495eb6370a29b7f13102
+#: ../../source/overview.rst:23
+msgid ""
+"Gengo uses a large (5000+) team of translators, who are in all timezones "
+"around the globe. All translators who want to work for Gengo first have to "
+"take and pass at least one translation test."
+msgstr ""
+
+# 952a35166fbb432b8a7dcc48612a81f6
+#: ../../source/overview.rst:27
+msgid ""
+"Gengo's translators are notified of new jobs when they come in, and work on "
+"translations on a first-come, first-serve basis. They work on the jobs "
+"within our website's translation interface."
+msgstr ""
+
+# 2fda431f9fdc4ae68cfc5027921687e6
+#: ../../source/overview.rst:32
+msgid "Methodology"
+msgstr ""
+
+# 033063e5626a4dea894444b3fe8cc2f1
+#: ../../source/overview.rst:34
+msgid ""
+"The Translate API attempts to follow a `REST-based architecture <http://en."
+"wikipedia.org/wiki/Representational_state_transfer>`__. The main resource "
+"(entry-point) revolves around jobs, and state changes on jobs should be done "
+"with PUT calls on the desired resource. For situations where certain HTTP "
+"methods can not be used (such as PUT or DELETE), methods can be overridden "
+"with the \"\\_method\" parameter."
+msgstr ""
+
+# 78b5f5a57aed4501a765bc97e096b270
+#: ../../source/overview.rst:42
+msgid "Ordering jobs"
+msgstr ""
+
+# b9407d06c46b485598022132211d5d76
+#: ../../source/overview.rst:44
+msgid ""
+"To order translation, you should make a `translate/jobs/ (POST) <./v2/jobs."
+"html#jobs-post>`__ call. See the method page for details. As a response to "
+"this request, Gengo will return back an order\\_id number and then begin "
+"inserting your jobs into our system. At this time, you can make a request to "
+"`translate/order/ (GET) <./v2/order.html#order-get>`__ and check the result "
+"of \"jobs\\_queued\" to see if your order is processed or not. "
+"Alternatively, once a translator starts working on one of the jobs, a "
+"callback will be sent - which indicates all jobs are in your system from "
+"that order."
+msgstr ""
+
+# ae00030a64c643d6b333d01a02ad5cb7
+# af341f70491d4e20a176990e923639cd
+#: ../../source/overview.rst:55 ../../source/overview/job_statuses.rst:2
+msgid "Job statuses"
+msgstr ""
+
+# a1f760e274174349b74f69c111b5a447
+#: ../../source/overview.rst:57
+msgid ""
+"Once a job has been added to our system, they are given the status "
+"\"available\" which means our translators can now see them and notifications "
+"will be sent out. When a translator picks up a job, the status becomes "
+"\"pending\" which means a translator is currently working on that job. If "
+"the \"auto\\_approve\" parameter was set to 0 (false) when the order was "
+"placed, the next status the job will change to is \"reviewable\". At this "
+"time you can make a `translate/job/ (PUT) <./v2/job.html#job-put>`__ call to "
+"update the status. However, if the job was ordered with the \"auto\\_approve"
+"\" paramater set to 1 (true) then the status will be set to \"approved\" and "
+"your translation will be accessible."
+msgstr ""
+
+# a2909aa82df2425bacc6eace6e302b76
+#: ../../source/overview.rst:70
+msgid "Working without a database"
+msgstr ""
+
+# c4588f88144640ccae350890ce5d125f
+#: ../../source/overview.rst:72
+msgid ""
+"If you want to order translations within your app without using a database, "
+"you can use what we call \"lazy loading\" to request strings to be "
+"translated without having to pass an ID to our app every time you want to "
+"check on their progress or receive a translation back. For instance, if you "
+"have a simple PHP website that just has a few strings in it, you might not "
+"want to have to store the unique ID we return from our translate/jobs/ POST "
+"call - instead, you can use `translate/jobs/ (POST) <./v2/jobs.html#jobs-"
+"post>`__ and simply pass us a string. If it has already been requested by "
+"you, you won't be charged again for the translation - and if has been "
+"translated you will receive back the translation at that point."
+msgstr ""
+
+# 3860aec035f7400ab01b6554d2a9b548
+#: ../../source/overview.rst:85
+msgid "Polling"
+msgstr ""
+
+# 0d94582cfd6b41eaaabe1885b3e77580
+#: ../../source/overview.rst:87
+msgid ""
+"Each job has a unique URL that will return the status of the job. A typical "
+"response will mention its status (\"incomplete\", \"reviewable\", etc.) and "
+"include the translated content if completed and approved. If the job is not "
+"yet complete, a machine translation will be offered temporarily. Excessive "
+"polling will result in a suspended account, so please be reasonable about "
+"using this method. We currently recommend polling not more than once every "
+"30 minutes."
+msgstr ""
+
+# aaea80deef1643f5bcb75d79f497f7fc
+#: ../../source/overview.rst:96
+msgid "Callbacks"
+msgstr ""
+
+# c21e80d298834863925cde19d9184d2c
+#: ../../source/overview.rst:98
+msgid ""
+"Callbacks are our recommended way of being notified when a translation job "
+"is ready. Each api\\_key (obtained from the Account area) can be assigned a "
+"default callback URL telling Gengo where to send notifications when a job is "
+"ready for approval. Similar to PayPal’s IPN methodology, this allows an API "
+"implementation to be notified about translation jobs when they are ready. "
+"Read details about how this works on the `Callback URLs <./overview/"
+"callback_urls.html>`__ page."
+msgstr ""
+
+# d2416ea6dac54cc1a303ff929936bb31
+#: ../../source/overview.rst:107
+msgid "Grouping jobs"
+msgstr ""
+
+# 30caec6dad8349f89175daf5e1aa5e89
+#: ../../source/overview.rst:109
+msgid ""
+"If you want a set of jobs to be completed by one translator, you can group "
+"them when you place the `translate/jobs/ (POST) <./v2/jobs.html#jobs-"
+"post>`__ call. This is useful if you want to ensure consistency - but please "
+"bear in mind it will take longer than a non-grouped order as the jobs will "
+"have to be done sequentially rather than in parallel."
+msgstr ""
+
+# 38e78cd950974b5fa59c8ac9e2a9b0dc
+#: ../../source/overview.rst:117
+msgid "Escaping text from a job"
+msgstr ""
+
+# de0d79ed58a94a21ab53b6cddc80423d
+#: ../../source/overview.rst:119
+msgid ""
+"Sometimes you might want to include text within a job that you do not need "
+"to be translated (such as code blocks, or inline comments for the "
+"translator). To exclude text from the word count of a job, and indicate to "
+"the translator that it does not need to be translated, you can wrap text "
+"within triple square brackets [[[like this]]]. Please remember to close your "
+"triple brackets, and try to avoid having large areas of excluded text - it's "
+"normally better to break the job into parts instead."
+msgstr ""
+
+# bb95cd2ccf5e4f9e8ee73b795452f4b0
+#: ../../source/overview.rst:129
+msgid "What do the different levels (Standard, Pro, Ultra) mean?"
+msgstr ""
+
+# e4ae5cdac3ee4420a40ebede781fc08e
+#: ../../source/overview.rst:131
+msgid ""
+"Please see our `Quality Policy <http://gengo.com/help/quality_policy>`__ "
+"page for more information."
+msgstr ""
+
+# 8c40d0b4c3cd4426a5f7fbae2aa2dc0e
+#: ../../source/overview.rst:135
+msgid "Cancelling jobs"
+msgstr ""
+
+# 6dc7959395224ad4a40df5c29c908c33
+#: ../../source/overview.rst:137
+msgid ""
+"Call `translate/job/{id} (DELETE) <./v2/job.html#job-delete>`__ to cancel a "
+"job. If you are unable to use the DELETE http method, you can fake the "
+"method by adding the \\_method=\"delete\" parameter. You may only cancel "
+"translations while their status is \"available\" - this is to avoid wasting "
+"translator time."
+msgstr ""
+
+# ccdfb4b3cedf431bace846b0231e054e
+#: ../../source/overview.rst:144
+msgid "Comments"
+msgstr ""
+
+# 3f13a9bbf6af4b3b823687fb2e10611c
+#: ../../source/overview.rst:146
+msgid ""
+"You can add comments to each job, whatever status it is in. Use the "
+"`translate/job/{id}/comment (POST) <./v2/job.html#comment-post>`__ method to "
+"add comments to a job that you have already submitted, and attach a comment "
+"to your job within the `translate/jobs/ (POST) <./v2/jobs.html#jobs-post>`__ "
+"call when you order."
+msgstr ""
+
+# 3186e593e8c74f2f876f6a06aaf694e2
+#: ../../source/overview.rst:152
+msgid ""
+"We recommend you do add comments to all jobs to give context and direction "
+"to the translator. Jobs that have comments are usually picked up and "
+"translated more quickly than those that don't. Translators can also add "
+"comments to a job to add detail, or ask for clarifications."
+msgstr ""
+
+# 5c39afd302a240e5a9169c3142fb902e
+#: ../../source/overview.rst:157
+msgid ""
+"If your system will not be able to respond to comments, or you do not plan "
+"to, it is helpful to add a comment saying \"Our system is unable to respond "
+"to any translator comments\" or similar - this will avoid the translator "
+"waiting for a response from you. We may add a further parameter for this "
+"specific case - let us know what you think using the \"Feedback\" tab."
+msgstr ""
+
+# 3652a42355074ba7b6c9c340399c920b
+#: ../../source/overview.rst:164
+msgid ""
+"Please bear in mind that it is prohibited by our terms of service to solicit "
+"contact details from a Gengo translator."
+msgstr ""
+
+# b0b88b1d8db64ec189e6bf9165a7084f
+#: ../../source/overview.rst:168
+msgid "The review process"
+msgstr ""
+
+# caf8de925e6f4f1d94da3e7d5dfe70c4
+#: ../../source/overview.rst:170
+msgid ""
+"As we charge for human translation, we offer our customers the opportunity "
+"to review jobs and formally approve them. To handle the approval process in "
+"your application, you will need to build an interface for your users to "
+"review the preview text, and potentially to review a captcha."
+msgstr ""
+
+# 0a7eb9fc960b4166afbc2c5ae6e5c847
+#: ../../source/overview.rst:176
+msgid ""
+"By approving a job you are telling us that you are happy with the "
+"translation and that you require no further work from the translator and "
+"that job. Please be aware that it is extremely difficult for us to make "
+"changes or offer any kind of refund after a job has been approved."
+msgstr ""
+
+# 05f46a567a5f40fea55027ed52897e60
+#: ../../source/overview.rst:181
+msgid ""
+"If you prefer not to manually approve jobs, or your system does not have the "
+"capability, you can simply add the auto\\_approve=\"true\" parameter to your "
+"job requests. This will instantly approve jobs when they are submitted, and "
+"provide you with the full translated text. Please note that by using the auto"
+"\\_approve parameter you waive your right to reject or request revisions on "
+"a translation."
+msgstr ""
+
+# 67bac171ca0d4aeb854b2d85e2a8902d
+#: ../../source/overview.rst:189
+msgid "Approving jobs"
+msgstr ""
+
+# 9842429824734911be931a5bc3839441
+#: ../../source/overview.rst:191
+msgid ""
+"To approve a job, send a `translate/job/{id} (PUT) <./v2/job.html#job-"
+"put>`__ call with the action set to \"approve\". You can also add feedback "
+"at this time, consisting of a rating from 1-5, a comment for the translator "
+"and a comment for Gengo. The feedback rating and comment for the translator "
+"are sent to the translator, and Gengo receives the rating, comment for "
+"translator and comment for Gengo."
+msgstr ""
+
+# b20d6fea59374f59882c59b3cac9bfa3
+#: ../../source/overview.rst:198
+msgid ""
+"It really helps us to receive feedback ratings for each translation, as we "
+"can see how well our translators are doing, reward good work, and provide "
+"guidance to any translator that is not performing well. We may also use the "
+"feedback ratings in future to prioritize translator-job matchings."
+msgstr ""
+
+# bc6b7e8ed62d48c2a9c640aa1f4012f1
+#: ../../source/overview.rst:204
+msgid ""
+"For this reason, it is unhelpful to place automatic feedback rating commands "
+"into your application - for instance by always rating each job as 3/5. So "
+"please only submit feedback that has been explicitly provided by a human, "
+"otherwise leave it blank."
+msgstr ""
+
+# cd527caca6d34844950ccd265d4e3159
+#: ../../source/overview.rst:210
+msgid "Automatic approval"
+msgstr ""
+
+# e599dab5642c43759199ba406414b58d
+#: ../../source/overview.rst:212
+msgid ""
+"If a job is in a reviewable state for a certain time, it will be "
+"automatically approved. This is so that translators do not have to wait "
+"unnecessarily for confirmation or payment. The period is 72 hours, or 24 "
+"hours for each 1000 words, whichever is the greatest. For example, a 5,000 "
+"word job would have an auto-approve period of 24 hours x 5 = 120 hours."
+msgstr ""
+
+# efd992cf8893403383010c91f255dab4
+#: ../../source/overview.rst:220
+msgid "Revising jobs"
+msgstr ""
+
+# 6168c2f87a894eddb501d65012590219
+#: ../../source/overview.rst:222
+msgid ""
+"If a job requires corrections, you can request them using the `translate/job/"
+"{id} (PUT) <./v2/job.html#job-put>`__ call, and the \"revise\" action. "
+"Please be as descriptive as possible with your comment when you request a "
+"correction."
+msgstr ""
+
+# 577feabf2ddc426d88b302f7cf581a55
+#: ../../source/overview.rst:228
+msgid "Rejecting jobs"
+msgstr ""
+
+# 28bbbbfd9e2b4aa09236a3af3d21c273
+#: ../../source/overview.rst:230
+msgid ""
+"If you are unhappy with a translation from Gengo, you have the opportunity "
+"to reject the job and either receive a credits refund, or pass the job onto "
+"a different translator. For more details on what you can expect from our "
+"translation, please visit our `Quality Policy <http://gengo.com/help/"
+"quality_policy/>`__ page, which outlines what constitutes a fair or unfair "
+"rejection."
+msgstr ""
+
+# 71e5395182094a1e9d81b509a80dbb36
+#: ../../source/overview.rst:237
+msgid ""
+"All rejections are reviewed by our staff, and we take each one seriously - "
+"normally we will contact the translator and review what has gone wrong with "
+"that particular translation. While we are obviously happy to uphold fair "
+"rejections, if you persistently reject jobs without reason, your account "
+"will be suspended as this kind of behaviour is unfair to the translator and "
+"time-consuming for us."
+msgstr ""
+
+# 79137531eaf54bea87fe1b852dd5ac58
+#: ../../source/overview.rst:244
+msgid ""
+"To reject a job, use the `translate/job/{id} (PUT) <./v2/job.html#job-"
+"put>`__ call with the action parameter set to \"reject\". We insist that "
+"rejections are made by humans (because we don't want machines rejecting "
+"translations) so we require you to complete a captcha when you submit a "
+"rejection. See the `translate/job/{id} (PUT) <./v2/job.html#job-put>`__ page "
+"for more details."
+msgstr ""
+
+# 256fa9a3817240348c8b665f8d4dc0fa
+#: ../../source/overview.rst:251
+msgid "Order machine translation"
+msgstr ""
+
+# 0c132b0cb92b4c9b8fe953648fd0fb00
+#: ../../source/overview.rst:253
+msgid ""
+"We've tried to make it convenient for you to use the Gengo API both for "
+"human and machine translation. While we're not big fans of the low quality "
+"machine translation can produce, we realise that not all users want, or can "
+"afford for, all of their content to be translated by humans. So it's easy "
+"for you to switch between the two, and machine translation is free. If you "
+"would like to order machine translation only, simply use the tier=\"machine"
+"\" when you call the `translate/jobs (POST) <./v2/jobs.html#jobs-post>`__ "
+"method and you will not be charged for your order. Please also note that "
+"machine translations have a character limit of 2000 characters per request."
+msgstr ""
+
+# 359395526bcd4877992d3a866009442a
+#: ../../source/overview.rst:264
+msgid ""
+"We use Bing's Translator API service to supply our machine translation. Let "
+"us know if there's another free service you'd like us to add by using the "
+"Feedback tab."
+msgstr ""
+
+# 4989c0274ccf44218901aec0162e73a6
+#: ../../source/overview.rst:269
+msgid "Machine translation preview"
+msgstr ""
+
+# c65facc2109742ae8ae81cb738cd0d87
+#: ../../source/overview.rst:271
+msgid ""
+"If you have ordered human translation, and are still waiting for the job to "
+"be reviewable, you can see a machine translation preview by including the pre"
+"\\_mt=\"1\" parameter. This might be useful if you have new content that you "
+"want to show up on a page, and you don't want to wait for the human "
+"translation before publishing."
+msgstr ""
+
+# e7b9a9c6e7ea4384a4007500b018dadd
+#: ../../source/overview.rst:278
+msgid "Retrieve orders placed from Web UI via the API and vice versa"
+msgstr ""
+
+# 011f4e6233174616a8a816330d145f2b
+#: ../../source/overview.rst:280
+msgid ""
+"If you place an order via the web form, you can retrieve it via the API by "
+"using the job ID which is found through your customer dashboard, and use it "
+"in calls like `translate/job/{id} (GET) <./v2/job.html#job-get>`__. Please "
+"note that jobs ordered via the web form do not trigger API callbacks."
+msgstr ""
+
+# 77ae2573229b494bbd8653bd7698781b
+#: ../../source/overview.rst:286
+msgid ""
+"You can see jobs placed through the API on the website, on your customer "
+"dashboard, by logging into the gengo.com site."
+msgstr ""
+
+# 426afd36a04f489893729127c40319f4
+#: ../../source/overview.rst:290
+msgid "Using credits"
+msgstr ""
+
+# 597f11f4d3c24feab317ef34409f49fc
+#: ../../source/overview.rst:292
+msgid ""
+"All human translation jobs ordered via the API require up-front payment of "
+"Gengo credits. Credits are deducted from your account when you order jobs "
+"via a `translate/jobs/ (POST) <./v2/jobs.html#jobs-post>`__ call (except "
+"when you use a tier of \"machine\" to order machine translation). You can "
+"buy credits by logging into the gengo.com site and visiting your Account "
+"page. The current version of the Gengo Translate API requires accounts to "
+"maintain a positive credit balance for jobs to be translated. If there are "
+"not enough credits to process a job when it is submitted via the API, the "
+"response will indicate this."
+msgstr ""
+
+# 958c7a08f4444caf875267fdd5b14619
+#: ../../source/overview.rst:303
+msgid "Call Formats"
+msgstr ""
+
+# 12bd8115103c45a7b37169eacc16d0fb
+#: ../../source/overview.rst:305
+msgid ""
+"All API calls require the api\\_key parameter to be sent. Authenticated "
+"calls must also be signed and sent with the api\\_sig parameter. If the call "
+"is by POST, parameters specific to the entry-point should be wrapped in a "
+"parameter named \"data\"."
+msgstr ""
+
+# 0657eda8871b419fb24b2cf484923915
+#: ../../source/overview.rst:310
+msgid "For example, an API call might send the following key-value pairs:"
+msgstr ""
+
+# 2f60b986f39a44cc85c6fcb77275eafb
+#: ../../source/overview.rst:321
+msgid ""
+"A GET call on the other hand might have the following query string: ?api"
+"\\_key=...&api\\_sig=...&lc\\_src=.."
+msgstr ""
+
+# 2ec8e10916ab4ac79a28dc8a053c6997
+#: ../../source/overview.rst:325
+msgid "Response Formats"
+msgstr ""
+
+# 2a50e97837524ef0a7a21e69a476618c
+#: ../../source/overview.rst:327
+msgid ""
+"All API responses will contain at least 1 and possibly 2 key-value pairs. "
+"The second key's name will depend on whether the call was successful or not. "
+"The second key name for a successful call with an expected payload will be "
+"\"response\", i.e. {\"opstat\" : \"ok\", \"response\" : \"...\"} and a "
+"failed response will have second key name as \"err\", i.e. {\"opstat\" : "
+"\"error\", \"err\" : {\"code\" : ...}}"
+msgstr ""
+
+# 8eb30846ec164d50b5dc30b8cd92a57c
+#: ../../source/overview.rst:334
+msgid ""
+"Currently the API can respond in one of two response formats: JSON and XML. "
+"Examples of successful and failed responses in each format can be found on "
+"the [example call and responses] page. You can specify the response format "
+"as an HTTP Header value (\"Accept: application/json\"), or send the format "
+"query parameter with the desired response type. If both an HTTP Header value "
+"and format parameter exist, the format parameter takes precedence. By "
+"default, responses are sent in JSON."
+msgstr ""
+
+# b42e7c48f9274f4b9938c657bea7a575
+#: ../../source/overview.rst:343
+msgid "Encoding"
+msgstr ""
+
+# 62d6e1bc2a9e4351a87666906317b84c
+#: ../../source/overview.rst:345
+msgid ""
+"Gengo expects all data to be UTF-8 encoded and will respond with UTF-8 "
+"encoded data. Make sure you encode your data in UTF-8 to avoid issues."
+msgstr ""
+
+# 02f12c6ad6324984bb4a9f673940a792
+#: ../../source/overview/api_methods.rst:2
+msgid "API Methods"
+msgstr ""
+
+# a612a0799915422a90724c0654e8a245
+#: ../../source/overview/api_methods.rst:4
+msgid ""
+"`account/stats **(GET)** <../v2/account.html#stats-get>`__ : Retrieves "
+"account stats, such as orders made."
+msgstr ""
+
+# 3247ef37230f4f9a9343c838908a89ef
+#: ../../source/overview/api_methods.rst:7
+msgid ""
+"`account/balance **(GET)** <../v2/account.html#balance-get>`__ : Retrieves "
+"account balance in credits."
+msgstr ""
+
+# 13e7594d977e4ac6888d53ddb68627ba
+#: ../../source/overview/api_methods.rst:10
+msgid ""
+"`account/preferred\\_translators **(GET)** <../v2/account.html#preferred-"
+"translators-get>`__ : Retrieves preferred translators set by user."
+msgstr ""
+
+# 801392afc65b42c3aa21cc17f91f0719
+#: ../../source/overview/api_methods.rst:14
+msgid ""
+"`translate/job/{id} **(GET)** <../v2/job.html#job-get>`__ : Retrieves a "
+"specific job."
+msgstr ""
+
+# 2d86117d3ed74c47aae668f795059c88
+#: ../../source/overview/api_methods.rst:17
+msgid ""
+"`translate/job/{id} **(PUT)** <../v2/job.html#job-put>`__ : Updates a job to "
+"translate."
+msgstr ""
+
+# c3021a4a6ca44a47b2137d2021e817fe
+#: ../../source/overview/api_methods.rst:20
+msgid ""
+"`translate/job/{id} **(DELETE)** <../v2/job.html#job-delete>`__ : Cancels "
+"the job. You can only cancel a job if it has not been started already by a "
+"translator."
+msgstr ""
+
+# 013c7f461ac5430dbcc2017598fd572c
+#: ../../source/overview/api_methods.rst:24
+msgid ""
+"`translate/job/{id}/revision/{rev\\_id} **(GET)** <../v2/job.html#revision-"
+"get>`__ : Gets a specific revision for a job."
+msgstr ""
+
+# ac00e5aaca0142b3930363c4d3e29864
+#: ../../source/overview/api_methods.rst:28
+msgid ""
+"`translate/job/{id}/revisions **(GET)** <../v2/job.html#revisions-get>`__ : "
+"Gets list of revision resources for a job. Revisions are created each time a "
+"translator or Senior Translator updates the text."
+msgstr ""
+
+# 83bf9ba2a3e540ada71585b50aed8c20
+#: ../../source/overview/api_methods.rst:32
+msgid ""
+"`translate/job/{id}/feedback **(GET)** <../v2/job.html#feedback-get>`__ : "
+"Retrieves the feedback you have submitted for a particular job."
+msgstr ""
+
+# c562b5950f494e6e9c7c251f8eeef3fc
+#: ../../source/overview/api_methods.rst:35
+msgid ""
+"`translate/job/{id}/comment **(POST)** <../v2/job.html#comment-post>`__ : "
+"Submits a new comment to the job's comment thread."
+msgstr ""
+
+# 1fbcf2ff89134c8aa1d666d8a5be7eba
+#: ../../source/overview/api_methods.rst:38
+msgid ""
+"`translate/job/{id}/comments **(GET)** <../v2/job.html#comments-get>`__ : "
+"Retrieves the comment thread for a job."
+msgstr ""
+
+# db5202bcd29e48d0a51f799ee8055d2b
+#: ../../source/overview/api_methods.rst:41
+msgid ""
+"`translate/jobs **(GET)** <../v2/jobs.html#jobs-get>`__ : Retrieves a list "
+"of resources for the most recent jobs filtered by the given parameters."
+msgstr ""
+
+# a4acb54ab9f145908b3eb9764fd98279
+#: ../../source/overview/api_methods.rst:44
+msgid ""
+"`translate/jobs/{ids} **(GET)** <../v2/jobs.html#jobs-by-id-get>`__ : "
+"Retrieves a list of jobs. They are requested by a comma-separated list of "
+"job ids."
+msgstr ""
+
+# e48e87ec152a438d9015ef48630ad7e9
+#: ../../source/overview/api_methods.rst:48
+msgid ""
+"`translate/jobs **(POST)** <../v2/jobs.html#jobs-post>`__ : Submits a job or "
+"group of jobs to translate."
+msgstr ""
+
+# ab12b06856264358964694dd71df6b6d
+#: ../../source/overview/api_methods.rst:51
+msgid ""
+"`translate/order **(GET)** <../v2/order.html#order-get>`__ : Retrieves a "
+"specific order containing all jobs."
+msgstr ""
+
+# 0784a06d235e4685be0a7de43149fc4c
+#: ../../source/overview/api_methods.rst:54
+msgid ""
+"`translate/order **(DELETE)** <../v2/order.html#order-delete>`__ : Deletes "
+"all available jobs in an order."
+msgstr ""
+
+# e97c05fc1ff14368b5c862d0a77183fa
+#: ../../source/overview/api_methods.rst:57
+msgid ""
+"`translate/glossary **(GET)** <../v2/glossary.html#glossaries-get>`__ : "
+"Retrieves a list of glossaries that belongs to the authenticated user"
+msgstr ""
+
+# d1a6d4d467724d44a08763dafe32b494
+#: ../../source/overview/api_methods.rst:60
+msgid ""
+"`translate/glossary/{id} **(GET)** <../v2/glossary.html#glossary-get>`__ : "
+"Retreives a glossary by Id"
+msgstr ""
+
+# 61b5cea091cb430380c79f47156a5ebd
+#: ../../source/overview/api_methods.rst:63
+msgid ""
+"`translate/service/language\\_pairs **(GET)** <../v2/service.html#language-"
+"pairs-get>`__ : Returns supported translation language pairs, tiers, and "
+"credit prices."
+msgstr ""
+
+# 0cb304fe47704d569b358f57212eed20
+#: ../../source/overview/api_methods.rst:67
+msgid ""
+"`translate/service/languages **(GET)** <../v2/service.html#languages-"
+"get>`__ : Returns a list of supported languages and their language codes."
+msgstr ""
+
+# 0354d90f835b471db2d3110cd14750ba
+#: ../../source/overview/api_methods.rst:70
+msgid ""
+"`translate/service/quote **(POST)** <../v2/service.html#quote-post>`__ : "
+"Returns credit quote and unit count for text based on content, tier, and "
+"language pair for job or jobs submitted."
+msgstr ""
+
+# 6810559ec9c14b7bb665b5d9acd624e1
+#: ../../source/overview/api_methods.rst:74
+msgid ""
+"`translate/service/quote/file **(POST)** <../v2/service.html#quote-files-"
+"post>`__ : Uploads files to Gengo and returns a quote for each file, with an "
+"identifier for when client is ready to place the actual order. Price quote "
+"is based on content, tier, and language pair."
+msgstr ""
+
+# fe291ec5a0994fc6a0f5b9b5c6e5bc34
+#: ../../source/overview/authentication.rst:2
+msgid "Authentication"
+msgstr ""
+
+# a454f66843eb4ebdb66f2d5212491462
+#: ../../source/overview/authentication.rst:4
+msgid ""
+"API users must have a registered Gengo account to acquire a pair of keys - a "
+"public key (api\\_key), or token, and private key (private\\_key). The api"
+"\\_key is used to identify a user, and the private\\_key is used to "
+"authenticate each API call. The combination effectively functions as a "
+"username and password. Therefore you should keep the private\\_key "
+"(surprise, surprise!) private."
+msgstr ""
+
+# 0d95176387b748c88dd05a6c7cc4ac2c
+#: ../../source/overview/authentication.rst:11
+msgid "The keys are created and retrieved from your user Account section."
+msgstr ""
+
+# 1e8f2a8e23f34470809e46cca3cee5a6
+#: ../../source/overview/authentication.rst:13
+msgid ""
+"Every restricted (non public) REST call will need to be authenticated by "
+"Gengo. The process of making an authenticated request is simple, and is as "
+"follows:"
+msgstr ""
+
+# 24bf55ab173c42ac9da355ab720c0a30
+#: ../../source/overview/authentication.rst:18
+msgid "Signing Calls"
+msgstr ""
+
+# 2d4494b9667d485eaa0c8724535d8f44
+#: ../../source/overview/authentication.rst:20
+msgid ""
+"All authenticated calls must be signed. The process for signing is as "
+"follows:"
+msgstr ""
+
+# 465e7dda5c734780b71effa748a6ec10
+#: ../../source/overview/authentication.rst:23
+msgid "Get the current Unix epoch time as an integer"
+msgstr ""
+
+# 6a14be990e4a420bb43a7202d486a016
+#: ../../source/overview/authentication.rst:24
+msgid "Insert the time as the value to a 'ts' key in your argument list"
+msgstr ""
+
+# 6badd1e8e1e44ec1984653e12292e27d
+#: ../../source/overview/authentication.rst:25
+msgid "Calculate the SHA1 hash of the timestamp against your private key"
+msgstr ""
+
+# 9cf65129d95d4fbb8cdefb715e6cf0d9
+#: ../../source/overview/authentication.rst:26
+msgid ""
+"Append the value of this hash to the argument list as a parameter named api"
+"\\_sig"
+msgstr ""
+
+# b19153c9e42a42a4b5f50e513bf045b2
+#: ../../source/overview/authentication.rst:30
+msgid "Example API authenticated call"
+msgstr ""
+
+# 66d94dfb1cfc4942a337a587f05c0b7b
+#: ../../source/overview/best_practices.rst:2
+msgid "Best Practices for Plugins & API Usage"
+msgstr ""
+
+# da375af916b84dad96a4ca9367ca18ba
+#: ../../source/overview/best_practices.rst:4
+msgid ""
+"The Gengo API, while versatile, is still the technical bare-bones plumbing "
+"necessary to integrate the benefits of translation into any application. If "
+"you're interested in building a plugin or application that uses the Gengo "
+"API, it's worth considering a few things. We've rounded up some information "
+"below that we've found helps make third party plugins and applications more "
+"successful in the long run."
+msgstr ""
+
+# 05fb7005d3eb47e7879c023d08691206
+#: ../../source/overview/best_practices.rst:12
+msgid "Use Gengo Passport to sign in"
+msgstr ""
+
+# e431a19fa19a42e7adf3e3e27dd77ae8
+#: ../../source/overview/best_practices.rst:14
+msgid ""
+"The Gengo API, like many others, relies on a system of API keys to sign and "
+"authenticate requests with. However, in most cases API keys as a system are "
+"less than ideal. Enter Gengo Passport, the simplest way to get users of your "
+"application authenticated with Gengo:"
+msgstr ""
+
+# 0a1c6f3314614b3dbd9eb9082554f999
+#: ../../source/overview/best_practices.rst:23
+msgid ""
+"All that's required to use this is to supply your application name, and "
+"users can be automatically taken through a process that authorizes your "
+"application to use their API keys. You'll need to store them yourself for "
+"later queries, but otherwise it's a simple one-step process that lets users "
+"hit the ground running on your application!"
+msgstr ""
+
+# 1d844ad16fd8428591293781cd8ab8c4
+#: ../../source/overview/best_practices.rst:29
+msgid ""
+"The flow will look a little something like this. At the moment it requires "
+"that the user already be signed up for Gengo, so we ask that you provide a "
+"link to register with us. We're working to release another version of "
+"Passport in the near future that will allow signing up from right within "
+"plugins."
+msgstr ""
+
+# ac89744d05fa4348809ec7335f037e70
+#: ../../source/overview/best_practices.rst:79
+msgid "Terms that make sense"
+msgstr ""
+
+# f02506cae96943398e97a251b25f1bf2
+#: ../../source/overview/best_practices.rst:81
+msgid ""
+"In terms of interacting with the Gengo API, data is shuttled back and forth "
+"as a \"job\". However, the typical interaction level a user has with Gengo "
+"finds them requesting \"translations\", and almost nowhere are they made "
+"aware of the concept of a \"job\". Consistency with the core Gengo "
+"experience ensures a user won't be confused when requesting translations in "
+"an otherwise foreign space."
+msgstr ""
+
+# a6c85bf590f34b0e914fde379390c8e0
+#: ../../source/overview/best_practices.rst:89
+msgid "Provide in-depth headers"
+msgstr ""
+
+# a32cee28e5cd40e28fdb5fb384979cf1
+#: ../../source/overview/best_practices.rst:91
+msgid ""
+"As the Gengo third party ecosystem continues to grow and generate traffic, "
+"it becomes more difficult to discern whether a specific version of an "
+"application is running into problems. Since the API is very \"write-heavy\", "
+"it's beneficial to be able to narrow down how bad translation requests make "
+"it into the system. If you provide us proper header information, we can spot "
+"this as it comes up and work with you to ensure your application is working "
+"as it needs to."
+msgstr ""
+
+# 51862b9ac79c4c8297160d5754601c40
+#: ../../source/overview/best_practices.rst:99
+msgid ""
+"If you're not using one of `our programming libraries <client_libraries."
+"html>`__ that are on tap, we ask that you send us a User-Agent in the "
+"following format:"
+msgstr ""
+
+# ee7d2104b55b46108752f36081d9fb86
+#: ../../source/overview/best_practices.rst:102
+msgid "Gengo app\\_name; Version app\\_version; your\\_site\\_url;"
+msgstr ""
+
+# 0e558ab92f2e400c81b81974d8acd58e
+#: ../../source/overview/best_practices.rst:104
+msgid ""
+"The documentation provided by the libraries we offer should give examples on "
+"how to provide app information. Any questions related to the libraries "
+"themselves can be asked on their respective repositories over at `our GitHub "
+"account <http://github.com/gengo>`__."
+msgstr ""
+
+# a31bd7ff7497412a84bf25ee3c027ef0
+#: ../../source/overview/best_practices.rst:110
+msgid "Group jobs that belong together"
+msgstr ""
+
+# d4a0f8721f524070bad4f2bdaa4faa83
+#: ../../source/overview/best_practices.rst:112
+msgid ""
+"A common issue translators run into is missing context on a job. "
+"Translations are rarely a one-to-one match, and providing as much context as "
+"possible ensures that translators will understand what actually needs to be "
+"said. `Gengo supports grouping jobs together <../v2/jobs.html#jobs-post>`__ "
+"so that they'll all go through the same translator, meaning that there's "
+"little to no loss of context when the translator goes to work."
+msgstr ""
+
+# a86a9f23639e467a8b90c6890358de5f
+#: ../../source/overview/best_practices.rst:119
+msgid ""
+"Blog posts are a superb example of this. If you're integrating with a blog "
+"client (WordPress, MovableType, etc) to translate posts, you should ensure "
+"that all aspects of the post are sent at once - title, body, and anything "
+"else that might apply. By doing this you enable the translator to see the "
+"bigger picture, and it results in less hassle and possible confusion for the "
+"user."
+msgstr ""
+
+# 76ba8e426fcc4f3f9c19215726f7e48c
+#: ../../source/overview/best_practices.rst:127
+msgid "Be mindful of rate limits"
+msgstr ""
+
+# 7ecd7176d71c4bbb86a7e202b168eea7
+#: ../../source/overview/best_practices.rst:129
+msgid ""
+"We're pretty generous with rate limits, but it's still possible to run up "
+"against them. To avoid this happening, try to be mindful of the number of "
+"requests you make to the API - for instance, if jobs can be grouped "
+"together, it's wise to do it so it all goes to Gengo in one request as "
+"opposed to several. Take advantage of our lazy-loading capabilities; we'll "
+"POST a job to you when it's completed, excessive polling isn't always "
+"necessary (or recommended!)."
+msgstr ""
+
+# f26c0dbd58dc48f98f48e7f488b846af
+#: ../../source/overview/best_practices.rst:138
+msgid "Make sure users know they can escape text!"
+msgstr ""
+
+# 7326feb35af84d51b3b442e8a7090c37
+#: ../../source/overview/best_practices.rst:140
+msgid ""
+"This one is a bit more of a \"power user\" feature, but it's one that we "
+"still find our customers using fairly consistently. In any given "
+"translation, blocks of text can be marked as \"do not translate\". Said text "
+"simply needs to be surrounded in triple brackets - example:"
+msgstr ""
+
+# 670c88adca284699be227279b9edae4e
+#: ../../source/overview/best_practices.rst:145
+msgid "My teacher gave us [[[ 7 apples ]]] today."
+msgstr ""
+
+# c4bc1fcbd29d4b26a0a2743493ce342e
+#: ../../source/overview/best_practices.rst:147
+msgid ""
+"In the above example, \"7 apples\" would be left untouched by the translator."
+msgstr ""
+
+# 8710fd133a9e412a9c86efe2563df146
+#: ../../source/overview/callback_urls.rst:2
+msgid "Callback URLs"
+msgstr ""
+
+# 296ebc317f58490ca30ae8ed696629e8
+#: ../../source/overview/callback_urls.rst:5
+msgid ""
+"Assign a callback URL for Gengo to send you job and comment notifications. "
+"Callbacks are the most efficient way to get the latest data from us."
+msgstr ""
+
+# 3382e45e29ec4815a51d9ca5664a97c7
+#: ../../source/overview/callback_urls.rst:7
+msgid "Callback notifications are sent when:"
+msgstr ""
+
+# 4d1c55685cf240d2a8020371a9e1ade6
+#: ../../source/overview/callback_urls.rst:9
+msgid "A job is ready for review"
+msgstr ""
+
+# 491f808c53314e26ac269b24b90c598a
+#: ../../source/overview/callback_urls.rst:10
+msgid ""
+"A job has been auto-approved (the auto\\_approve flag was set to 1 when "
+"submitting the job)"
+msgstr ""
+
+# 8a3269fea15746a1b77d0213bea032bb
+#: ../../source/overview/callback_urls.rst:12
+msgid "A job is manually approved via our Gengo Dashboard customer interface"
+msgstr ""
+
+# b22280393c394cdf94d63fc7db629a07
+#: ../../source/overview/callback_urls.rst:13
+msgid ""
+"A job was ordered and put into our Queue, processed, and ready to be picked "
+"up by a translator"
+msgstr ""
+
+# ad24377ee5944d9e937f558ff5eea90b
+#: ../../source/overview/callback_urls.rst:15
+msgid "A comment has been posted for a job"
+msgstr ""
+
+# 1f8ad4ea1b1443a989b975590bb503e2
+#: ../../source/overview/callback_urls.rst:17
+msgid ""
+"Callback URLs can be assigned per api-key or per job. A callback URL "
+"assigned to a job takes precedence over the default callback URL set for an "
+"api-key. Up to 3 attempts will be made to submit data to the callback URL - "
+"the first time will be immediately when applicable, with subsequent attempts "
+"an hour apart."
+msgstr ""
+
+# ef26f447bda4422784fda0e44b4f70a4
+#: ../../source/overview/callback_urls.rst:23
+msgid ""
+"For file jobs, the request that is sent to your callback will contain a "
+"\"file\\_url\\_tgt\" parameter, which is the link to the translated file. "
+"This link is different from the url you get from a GET on file jobs in Job"
+"(GET), which is \"src\\_file\\_link\"."
+msgstr ""
+
+# 4cd4b1ec9b7a449c84ac763c2ab3b84c
+#: ../../source/overview/callback_urls.rst:29
+msgid "Parameter Formats"
+msgstr ""
+
+# 859e705b78934f85907d0e5fd8f4542b
+#: ../../source/overview/callback_urls.rst:31
+msgid ""
+"Parameters to callbacks are formatted in JSON and submitted with a POST "
+"call. For job-related notifications, a Job Payload will be POSTed inside a "
+"parameter named \"job\" as if it were a response. The following is an "
+"example of how a client might receive a callback submission for a job from "
+"Gengo:"
+msgstr ""
+
+# 01832fb2e0cf497683017f84da1bf24c
+#: ../../source/overview/callback_urls.rst:41
+msgid ""
+"Comment-related notifications are sent to the same callback when a "
+"translator submits a comment for a job. The payload will be in a parameter "
+"named \"comment\", and will look like this:"
+msgstr ""
+
+# dc4f415f2dbe4bbc8ea76050a3782603
+#: ../../source/overview/callback_urls.rst:46
+msgid "job\\_id :"
+msgstr ""
+
+# a197383890924b4bb5ebba84db6a3083
+#: ../../source/overview/callback_urls.rst:46
+msgid "*String* of the Job ID for which comment applies"
+msgstr ""
+
+# bb3e2963f74544458c1a1aec03f802ae
+#: ../../source/overview/callback_urls.rst:49
+msgid "body :"
+msgstr ""
+
+# c1aeff825ca54281a3ee8a87b777fb8e
+#: ../../source/overview/callback_urls.rst:49
+msgid "*String* of the comment body"
+msgstr ""
+
+# 39971c0d503a441fab3e1088603b45f4
+#: ../../source/overview/callback_urls.rst:52
+msgid "ctime :"
+msgstr ""
+
+# 6acf1724980e4cb581a252c010446919
+#: ../../source/overview/callback_urls.rst:52
+msgid "*String* of the Unix Timestamp for when this comment was submitted"
+msgstr ""
+
+# 7713ea3ed3a74e5ebdea2ea8091d3656
+#: ../../source/overview/callback_urls.rst:55
+msgid "custom\\_data :"
+msgstr ""
+
+# 22a1030ef34446adb4016b0c0628ed6e
+#: ../../source/overview/callback_urls.rst:55
+msgid "*String* of the custom data associated with the job (if any)"
+msgstr ""
+
+# 3820f74d589e4fc4958a304c2054fefb
+#: ../../source/overview/callback_urls.rst:58
+msgid "file\\_url\\_tgt :"
+msgstr ""
+
+# d55609f3284d4dfca60b7d1c9e35c324
+#: ../../source/overview/callback_urls.rst:58
+msgid "*String* of the full URL of the target file"
+msgstr ""
+
+# 937179b525f14d9daaceff00fea3e9f1
+#: ../../source/overview/callback_urls.rst:60
+msgid ""
+"Here's an example of how a client might receive a callback submission for a "
+"job comment:"
+msgstr ""
+
+# afa3630e69b849d2a36533845f997c69
+#: ../../source/overview/client_libraries.rst:3
+msgid "Client Libraries"
+msgstr ""
+
+# 5e2b0be60652466ba7650087f9665231
+#: ../../source/overview/client_libraries.rst:6
+msgid "Library Selection"
+msgstr ""
+
+# de62171cf1fb4d52853e4c5d0d0719e0
+#: ../../source/overview/client_libraries.rst:9
+msgid "Official Libraries"
+msgstr ""
+
+# c3dd4fcb5bc34307ab9a3096648f13f9
+#: ../../source/overview/client_libraries.rst:11
+msgid ""
+"We provide official client libraries for a few popular programming "
+"languages, ready to drop straight into your code. We host them on Github, "
+"and encourage you to fork them."
+msgstr ""
+
+# 87735ece3fb448c3b5a8a5f50f8b5dfa
+#: ../../source/overview/client_libraries.rst:15
+msgid "`PHP <https://github.com/gengo/gengo-php>`__"
+msgstr ""
+
+# 598819dfa54e4eefb5d41ad35202238f
+#: ../../source/overview/client_libraries.rst:16
+msgid "`Python <https://github.com/gengo/gengo-python>`__"
+msgstr ""
+
+# 2acaa96d7abe4236b53888c31058b2d3
+#: ../../source/overview/client_libraries.rst:17
+msgid "`Java <https://github.com/gengo/gengo-java>`__"
+msgstr ""
+
+# bc9b07a25d514eec84b978e25445adbd
+#: ../../source/overview/client_libraries.rst:18
+msgid ""
+"`Ruby <https://github.com/gengo/gengo-ruby>`__ (also a `gem <https://"
+"rubygems.org/gems/gengo>`__)"
+msgstr ""
+
+# a65de28e882e44959db56d34e5a3802a
+#: ../../source/overview/client_libraries.rst:22
+msgid "Community Libraries"
+msgstr ""
+
+# 8a4ed67a5bc04a5c90d75018cf40b108
+#: ../../source/overview/client_libraries.rst:24
+msgid ""
+"Our developer community has created client libraries of their own (thanks!). "
+"These are maintained by the original author, and we provide links to them "
+"here for convenience."
+msgstr ""
+
+# 0660bd4ec6134e658e428d991a80a3e1
+#: ../../source/overview/client_libraries.rst:28
+msgid "`Racket <https://github.com/shawnps/mygengo-racket>`__"
+msgstr ""
+
+# 82a77b33362e40bb83554c67487c75dd
+#: ../../source/overview/client_libraries.rst:30
+msgid ""
+"We recommend checking out the `Getting Started <first_steps.html>`__, "
+"`System Overview <../overview.html>`__ and `Callback URLs <callback_urls."
+"html>`__ pages for an overview of the API before getting started on your "
+"app. You're also encouraged to use our `Sandbox <http://sandbox.gengo.com/"
+">`__ for testing your implementation."
+msgstr ""
+
+# ab9513a1d06f486c9dfa2cd13b966712
+#: ../../source/overview/client_libraries.rst:36
+msgid ""
+"Wrote your own client library in a language not seen here? `Let us know! "
+"<mailto:api@gengo.com?Subject=New%20client%20library>`__."
+msgstr ""
+
+# 1f53e869eb6b465fa7566408d80e0751
+#: ../../source/overview/client_libraries.rst:39
+msgid ""
+"All code is provided on an as-is basis under the `New BSD license <https://"
+"raw.github.com/gengo/gengo-python/master/LICENSE.txt>`__"
+msgstr ""
+
+# 5e7c39c2a2ca4271b554981205aa1faa
+#: ../../source/overview/first_steps.rst:3
+msgid "First steps"
+msgstr ""
+
+# e2f6a3ff7724489281af7f23248f438e
+#: ../../source/overview/first_steps.rst:6
+msgid "Follow these steps to get going with the API without any bumps:"
+msgstr ""
+
+# 1ec204d37441438d975635570ffcf56a
+#: ../../source/overview/first_steps.rst:12
+msgid "Setting a default callback and testing it. (Coming soon)"
+msgstr ""
+
+# d75509aed5c14eb2986357c5de9f6582
+#: ../../source/overview/first_steps.rst:15
+msgid "Step 1: Create a sandbox account and obtain an API key"
+msgstr ""
+
+# 190509f42b024030adbdf8aed83bd188
+#: ../../source/overview/first_steps.rst:17
+msgid ""
+"Every API call must be authorized using an API key. While you're testing, "
+"you should use the sandbox and generate your keys from there. In this "
+"tutorial I will show you how to create a sandbox account, so that you can "
+"get your API keys to make calls to the Gengo Translate API."
+msgstr ""
+
+# 1c14167c46684101aea85cfb68ca66cf
+#: ../../source/overview/first_steps.rst:22
+msgid ""
+"First you need to create a free sandbox account. Click \"Create a sandbox "
+"account\" below, enter your email and password, and verify your account "
+"through the email sent to you."
+msgstr ""
+
+# 6f11f76837734fda9ed85ec18ff3fd29
+#: ../../source/overview/first_steps.rst:26
+msgid ""
+"`Create a sandbox account <https://sandbox.gengo.com/auth/form/signup/>`__"
+msgstr ""
+
+# 06ec17098c5d476285422f68bc7e5965
+#: ../../source/overview/first_steps.rst:29
+msgid ""
+"After logging in, go to your Account section, and click on \"API settings\" "
+"in the right-hand menu."
+msgstr ""
+
+# c381b982bed1416abfcaffd0b40991e7
+#: ../../source/overview/first_steps.rst:32
+msgid ""
+"This is where your API keys will be stored. To create a new key, click "
+"\"Generate Key\"."
+msgstr ""
+
+# e15a3d34528b4951890223a77300d92e
+#: ../../source/overview/first_steps.rst:35
+msgid ""
+"Each public key has a corresponding private key and callback URL. The public "
+"key is what identifies you - kinda like your login name. The private key is "
+"like your password - do NOT share it with anyone, or they may be able to "
+"access your account. The callback URL is helpful if you want Gengo to send "
+"status updates about the progress of your job to your server or application."
+msgstr ""
+
+# 13fa6eda134544b2b5aa3a3e81f66dd0
+#: ../../source/overview/first_steps.rst:42
+msgid ""
+"Copy the public and private keys so you can use them in your application."
+msgstr ""
+
+# fafa0e9708b94bdbb1f6e3d1d8ee8374
+#: ../../source/overview/first_steps.rst:49
+msgid "That's it! In the next step we'll show some API calls in action."
+msgstr ""
+
+# 367f2ae18b2a40c4bfd2e08ae6b12b4f
+#: ../../source/overview/first_steps.rst:52
+msgid "Step 2: Play in the sandbox with your API keys"
+msgstr ""
+
+# d906e84a6cdc4dbc86c3063fcde661f8
+#: ../../source/overview/first_steps.rst:55
+msgid "Basic GET call"
+msgstr ""
+
+# 97c6c54856564768bdf152cee080826c
+#: ../../source/overview/first_steps.rst:57
+msgid ""
+"In this tutorial I will demonstrate how to make API calls using some command-"
+"line PHP scripts. In all examples, we'll assume the following constant "
+"values:"
+msgstr ""
+
+# 7f4eb51ed87d443aa7b7dafd77c13b53
+#: ../../source/overview/first_steps.rst:66
+msgid "Retrieving language pairs"
+msgstr ""
+
+# 24b6ec2ddf0a45d19583aa069c5683be
+#: ../../source/overview/first_steps.rst:68
+msgid ""
+"First we'll make a simple call to retrieve a list of translation language "
+"pairs."
+msgstr ""
+
+# 76df05607bbf4ab9a82b8be61183cf14
+#: ../../source/overview/first_steps.rst:75
+msgid "Return value:"
+msgstr ""
+
+# c2d95fa405f6467b854cb6e52420c363
+#: ../../source/overview/first_steps.rst:81
+msgid ""
+"What we get back is data about each supported language pair, including the "
+"quality level (or tier) and unit price."
+msgstr ""
+
+# 8896e21a49094e35b195717457143e81
+#: ../../source/overview/first_steps.rst:84
+msgid ""
+"So, that's a very simple example of how to retrieve data through the Gengo "
+"Translate API."
+msgstr ""
+
+# ac5d62a149f34951bb4d26bbf49f8493
+#: ../../source/overview/first_steps.rst:88
+msgid "Basic POST call"
+msgstr ""
+
+# 54b0bd94c5ec4d9d8404fbb8f88b0cee
+#: ../../source/overview/first_steps.rst:90
+msgid ""
+"Now let's submit some jobs for human translation. The sandbox allows users "
+"to quickly add fake credits so you can easily submit jobs. First, login and "
+"add some fake credits to your account."
+msgstr ""
+
+# 8572a5a7b54645219b69116bb18c073e
+#: ../../source/overview/first_steps.rst:94
+msgid ""
+"Once that's done, open the example jobs-post.php script and edit fields for "
+"two jobs to submit. Add some text to have translated in the 'body\\_src' "
+"field, and check that the source, target, and tier parameters are what we "
+"want. We can also send some custom data to associate with each job; this is "
+"data specific to your service and won't be touched at any time. Custom data "
+"will be returned verbatim whenever the job is requested."
+msgstr ""
+
+# 5dca4a9953ac4617a07911463d942bfa
+#: ../../source/overview/first_steps.rst:106
+msgid ""
+"You'll want to review documentation for the \"translate/jobs\" entry-point "
+"to see what other parameters are available, but for this example we will "
+"turn job-grouping off (which means different translators can work on each "
+"job)."
+msgstr ""
+
+# 6ba736c8eae34b64811f39d5083f3a86
+#: ../../source/overview/first_steps.rst:111
+msgid "So, let's post these two jobs:"
+msgstr ""
+
+# 366ac5586bac48ef95d738e1b622ecd5
+#: ../../source/overview/first_steps.rst:119
+msgid "The response will let you know various statistics about the order:"
+msgstr ""
+
+# 31cf53530293477eb277140f411cebdd
+#: ../../source/overview/first_steps.rst:125
+msgid ""
+"In the response from a job ``post``, one of the most important pieces of "
+"info is the ``order id``, which can be used to retrieve information about "
+"the order, such as the job ids of the jobs placed:"
+msgstr ""
+
+# 368ca4e2674d4887b48d0a0d2fa82cf2
+#: ../../source/overview/job_statuses.rst:4
+msgid ""
+"Each submitted job goes through a series of statuses before delivery. At any "
+"time when you request the contents of a job, it will be in one of the "
+"following states:"
+msgstr ""
+
+# 1a43a4fb8d0c42a9aea78f60a39d3410
+#: ../../source/overview/job_statuses.rst:8
+msgid ""
+"``queued`` : The jobs are being processed by our system but are not "
+"currently visible to our translators."
+msgstr ""
+
+# 32ebffab3ab74e9ea39a55d3643cc245
+#: ../../source/overview/job_statuses.rst:11
+msgid ""
+"``available`` : The jobs are now on our system and waiting for a translator "
+"to begin work."
+msgstr ""
+
+# 22e18241c75c497e94fe8a1fea0c0c1b
+#: ../../source/overview/job_statuses.rst:14
+msgid ""
+"``pending`` : A translator is now working on the content, but has not "
+"finished."
+msgstr ""
+
+# bec96fb6dd4b45bd9c7a5782d2d01e50
+#: ../../source/overview/job_statuses.rst:17
+msgid ""
+"``reviewable`` : Unless the parameter \"auto-approve\" is set to 1, this is "
+"the status that indicates the translation has been finished by our team."
+msgstr ""
+
+# 92b4c748593f4634b586136e8be36053
+#: ../../source/overview/job_statuses.rst:21
+msgid ""
+"``approved`` : The job has been approved by the customer and the translator "
+"has been paid for their work (if \"auto-approve\" is set to 1, this happens "
+"as soon the content is submitted by the translator)"
+msgstr ""
+
+# 9758055e578b4d5098925be0b597eecb
+#: ../../source/overview/job_statuses.rst:25
+msgid ""
+"``revising`` : The customer has requested that some changes are made to the "
+"translation."
+msgstr ""
+
+# fa4610d1d284467b9f0278f20894d97d
+#: ../../source/overview/job_statuses.rst:28
+msgid ""
+"``rejected`` : The customer has rejected the completed job and our support "
+"team has been triggered to follow up on the job."
+msgstr ""
+
+# a8c120cdd2054e2aa766146a63c7404d
+#: ../../source/overview/job_statuses.rst:31
+msgid ""
+"``canceled`` : The job has been cancelled before the translator has started "
+"working on the content."
+msgstr ""
+
+# 75903820360542d7b47e36fb1844ce8b
+#: ../../source/overview/job_statuses.rst:34
+msgid ""
+"When a job is in the \"reviewable\" status, you may send a request to the "
+"PUT /translate/job/ endpoint, which will move the job into \"approved\", "
+"\"revising\" or \"rejected\". If no PUT request is made within 72hrs, we "
+"automatically move the status to \"approved\"."
+msgstr ""
+
+# 948425facfc74a2fa30efdc31bb78e8a
+#: ../../source/overview/job_statuses.rst:39
+msgid ""
+"The completed translation is available in the \"reviewable\" and \"approved"
+"\" status."
+msgstr ""
+
+# 6ef12a51f46c4237aaec46f3e9ce7ca2
+#: ../../source/overview/sandbox.rst:2
+msgid "Sandbox testing"
+msgstr ""
+
+# 69274638bf664584908ec5ebff99844b
+#: ../../source/overview/sandbox.rst:5
+msgid "The testing area for your API code."
+msgstr ""
+
+# dc61eee7eaa942259db14a2755b61639
+#: ../../source/overview/sandbox.rst:7
+msgid "What’s different about the sandbox?"
+msgstr ""
+
+# 97b621960dce470f933683ef0ed1ed51
+#: ../../source/overview/sandbox.rst:9
+msgid "You can add free credits to your account at will, for testing."
+msgstr ""
+
+# 9a76f8d267a4462cb0317e79eab2dd44
+#: ../../source/overview/sandbox.rst:10
+msgid ""
+"You can trigger the \"completion\" of your translation jobs (i.e. be a faux "
+"translator) so that you can test what your code does in response."
+msgstr ""
+
+# 1a3ba865766449a884b42495a5e07d24
+#: ../../source/overview/sandbox.rst:13
+msgid ""
+"In the sandbox, toggling between job states (e.g. pending to reviewable etc) "
+"*does not* trigger callbacks"
+msgstr ""
+
+# ef46fc42f95646669b689eff852660cf
+#: ../../source/overview/sandbox.rst:15
+msgid "To tetst callbacks in the sandbox, click the **Send Callback** button"
+msgstr ""
+
+# 6a53840c90b849bd883148b5e5ae446d
+#: ../../source/overview/sandbox.rst:16
+msgid ""
+"Additional controls for you to manually trigger job status changes and other "
+"actions, so that you can test your callbacks."
+msgstr ""
+
+# 3e307811c47049b4998bd6dbba7689ef
+#: ../../source/overview/sandbox.rst:18
+msgid ""
+"The sandbox jobs database may occasionally be wiped clean to prepare it for "
+"new features. As such you should not rely on the sandbox for permanent "
+"storage."
+msgstr ""
+
+# 7fa5096e8dfe4a53b86ac8c282d80384
+#: ../../source/overview/sandbox.rst:23
+msgid "How to use the sandbox"
+msgstr ""
+
+# 147c2dbc70a84f8cb50c731be1348780
+#: ../../source/overview/sandbox.rst:25
+msgid ""
+"Check out the `developer documentation <http://developers.gengo.com>`__."
+msgstr ""
+
+# 98d062923c4849ac85c0a9f71e0682b8
+#: ../../source/overview/sandbox.rst:26
+msgid "Create your sandbox account"
+msgstr ""
+
+# f63913ec4b1b4c01b393311cc2c4e4ef
+#: ../../source/overview/sandbox.rst:27
+msgid ""
+"Log in and visit your Account API Keys page to generate a set of sandbox API "
+"keys."
+msgstr ""
+
+# 34b2ae21136f4083965c4ed959b94fbd
+#: ../../source/overview/sandbox.rst:29
+msgid ""
+"Test your app, using `http://api.sandbox.gengo.com/v2/` as the base call URL."
+msgstr ""
+
+# 215a3a7a62d5470db2ed2e1b0fe4e231
+#: ../../source/overview/sandbox.rst:31
+msgid ""
+"Ready to deploy? Head over to the live `gengo.com <http://gengo.com>`__ "
+"site. Create a full user account, generate a set of live API keys - and "
+"remember to paste them into your app."
+msgstr ""
+
+# 3734279edae941a2a06e974aea65a212
+#: ../../source/overview/sandbox.rst:36
+msgid "Ready? Get started on the sandbox."
+msgstr ""
+
+# 9cc09c1828b04580a25f8d1f8493a5e4
+#: ../../source/overview/sandbox.rst:38
+msgid "Create your `sandbox account <http://sandbox.gengo.com>`__"
+msgstr ""
+
+# 4da883e78cae47a0bab581a02fbd8ffc
+#: ../../source/overview/throttling.rst:2
+msgid "Throttling"
+msgstr ""
+
+# 2525a62dcd764177b4848e1211dea696
+#: ../../source/overview/throttling.rst:4
+msgid ""
+"Please note that our API currently has a 150 requests per minute limit per "
+"originating IP address."
+msgstr ""
+
+# 7a59572795a44641b2bbf3063683f8d0
+#: ../../source/overview/ui_recommendations.rst:2
+msgid "UI recommendations"
+msgstr ""
+
+# 6e822534332043b2bdad1b95e30667c5
+#: ../../source/overview/ui_recommendations.rst:4
+msgid ""
+"This document will help you implement a UI for your API connection to Gengo. "
+"If you need more information refer to our Translation API documentation "
+"(especially `System Overview <../overview.html>`__, `API First Steps <../"
+"overview/first_steps.html>`__ and `Best Practices for Plugins & API Usage "
+"<../overview/best_practices.html>`__, or `contact support <mailto:api@gengo."
+"com?Subject=Client%20library%20request>`__."
+msgstr ""
+
+# 9fe63b7cf3c2490ba9dbc94c0f920b47
+#: ../../source/overview/ui_recommendations.rst:12
+msgid "Things to remember when implementing a UI for Gengo translation"
+msgstr ""
+
+# a02c12eacb5f4d278dfc2ad1ae6d65ed
+#: ../../source/overview/ui_recommendations.rst:14
+msgid ""
+"Make it clear to the user when they place an order that the translation will "
+"cost money"
+msgstr ""
+
+# 01d2585f16c241baafc3061f0a9530b5
+#: ../../source/overview/ui_recommendations.rst:16
+msgid ""
+"Use the natural workflow of your app — only add extra panels if you have to"
+msgstr ""
+
+# d5d10140d1e541cf9bfed12056332181
+#: ../../source/overview/ui_recommendations.rst:18
+msgid ""
+"Stick to Gengo UI terminology wherever possible for consistency (as users "
+"may also use e.g. the Gengo web interface)"
+msgstr ""
+
+# 991fd30e94e94072a37368a757713b49
+#: ../../source/overview/ui_recommendations.rst:21
+msgid "…but make sure UI terms make sense to your users"
+msgstr ""
+
+# 57e45ef1cb3f415ba653cdbb724e92c9
+#: ../../source/overview/ui_recommendations.rst:23
+msgid ""
+"If using placeholder machine pre-translation, make it clear to the user when "
+"the content is machine translated"
+msgstr ""
+
+# 9690d64bb7fc41cf9e40b819ea1c531d
+#: ../../source/overview/ui_recommendations.rst:25
+msgid "Include help information from Gengo (or links to it) where possible"
+msgstr ""
+
+# 8bb9be0132c74faa9ecd68db9960d729
+#: ../../source/overview/ui_recommendations.rst:26
+msgid "Keep it simple"
+msgstr ""
+
+# 138a97ec2b9040b39111a7e9b4457f64
+#: ../../source/overview/ui_recommendations.rst:29
+msgid "What Gengo-related panels should your app have?"
+msgstr ""
+
+# 5327a38b5a6c4491845179f8de6e43b8
+#: ../../source/overview/ui_recommendations.rst:31
+msgid ""
+"Your app will need to display various panels, with content going back and "
+"forth to Gengo. Here are the recommended panels based on the Gengo API, with "
+"example wireframes. See Gengo’s web interface for example implementations."
+msgstr ""
+
+# 24fa6c003fcf44ceafd5453e0499e7fc
+#: ../../source/overview/ui_recommendations.rst:36
+msgid ""
+"**Note:** While you can combine or omit some panels, ensure your Gengo "
+"implementation covers the core functions (order, review, approve) and is "
+"easy for your users."
+msgstr ""
+
+# 6430801df1864b81bec34af369cc19dd
+#: ../../source/overview/ui_recommendations.rst:41
+msgid "Panels"
+msgstr ""
+
+# 18b4bfa4624b4ab3a7d1282aab69a8f0
+#: ../../source/overview/ui_recommendations.rst:43
+msgid ""
+"The Gengo API allows you to order one or more translations at once. The "
+"terms we use are:"
+msgstr ""
+
+# f30bb61ab55f42c09a78aeb4cc425e06
+#: ../../source/overview/ui_recommendations.rst:46
+msgid ""
+"**Job** — One piece of content to be translated. A job is the “atomic unit” "
+"of Gengo translation."
+msgstr ""
+
+# c09a204e01d64163904830ca0b1601e7
+#: ../../source/overview/ui_recommendations.rst:48
+msgid ""
+"**Group of jobs** — When ordering more than one job (such as the title, body "
+"and keywords fields of a blog post), you can choose to have them be handled "
+"by the same translator. This gives a more consistent translation, but will "
+"take longer to complete. A group of jobs must have the same settings — "
+"source and target languages, and translation tier."
+msgstr ""
+
+# abd5618795db4520a199a814156ae17a
+#: ../../source/overview/ui_recommendations.rst:55
+msgid ""
+"**Note:** While the core unit of the Gengo API is a “job”, please maintain "
+"consistency with the Gengo web experience and use the term “translation” in "
+"your UI."
+msgstr ""
+
+# 77098c08fa36456bb983451c036a1606
+#: ../../source/overview/ui_recommendations.rst:59
+msgid ""
+"`Order translation panel <#order-translation-panel>`__ : The user confirms "
+"the settings for translating some content and places an order (a job, a "
+"group of jobs, or multiple jobs)"
+msgstr ""
+
+# 8e219015bdeb4f22a100716dac4504c2
+#: ../../source/overview/ui_recommendations.rst:63
+msgid ""
+"`Translation jobs overview list <#translation-jobs-overview-list>`__ : The "
+"user can see the status of their translation jobs"
+msgstr ""
+
+# 299ca4c20c474c7ea0428802e3f906d7
+#: ../../source/overview/ui_recommendations.rst:66
+msgid ""
+"`Pending job panel <#pending-job-panel>`__ : The user can cancel the job, "
+"and optionally see placeholder machine translation, and/or the job’s "
+"estimated translation time"
+msgstr ""
+
+# 94e23d24a10d4e9ca5610f67bb679cb1
+#: ../../source/overview/ui_recommendations.rst:70
+msgid ""
+"`Comment thread panel <#comment-thread-panel>`__ : The user can see comments "
+"regarding a job, optionally with previous versions of the translation"
+msgstr ""
+
+# f3b93f59057049629985280faf457005
+#: ../../source/overview/ui_recommendations.rst:73
+msgid ""
+"`Comment submission panel <#comment-submission-panel>`__ : The user can send "
+"a comment to the job’s translator"
+msgstr ""
+
+# 00fa6e9042e34b0f99270039b3a5135d
+#: ../../source/overview/ui_recommendations.rst:76
+msgid ""
+"`Translation job review panel <#translation-job-review-panel>`__ : The user "
+"can accept a completed job, or potentially request corrections, reject the "
+"job, or provide feedback when accepting the job"
+msgstr ""
+
+# 55e54d8daa12446686b260cf3f5b7055
+#: ../../source/overview/ui_recommendations.rst:80
+msgid ""
+"`Feedback panel <#feedback-panel>`__ : The user can provide feedback when "
+"accepting a completed translation (as part of the translation job review "
+"panel), and optionally add the translator to a “preferred translators” list"
+msgstr ""
+
+# c480dc92bb0a4459aba1daca1bc1afb0
+#: ../../source/overview/ui_recommendations.rst:84
+msgid ""
+"`Approved translation panel <#approved-translation-panel>`__ : The user can "
+"see information about a job they approved, including the translated text"
+msgstr ""
+
+# 0cfbfdb6bdc7444f83a2a80b1798eadf
+#: ../../source/overview/ui_recommendations.rst:87
+msgid ""
+"`Request revisions panel <#request-revisions-panel>`__ : The user can "
+"formally request a correction, choosing a reason and submitting a comment"
+msgstr ""
+
+# bf2f2371818a40cabba442eaca5b1001
+#: ../../source/overview/ui_recommendations.rst:90
+msgid ""
+"`Job rejection panel <#job-rejection-panel>`__ : After successfully passing "
+"captcha the user can reject a translation (passing the job to a new "
+"translator), or optionally reject and cancel the translation. The user must "
+"choose a reason for the rejection and submit feedback."
+msgstr ""
+
+# be3410a4ea3c4241b69fc16c662512aa
+#: ../../source/overview/ui_recommendations.rst:95
+msgid ""
+"`Settings panel <#settings-panel>`__ : The user can specify settings related "
+"to translation"
+msgstr ""
+
+# 3a148965c2914c0f9cdd35fa99411814
+#: ../../source/overview/ui_recommendations.rst:98
+msgid "Views"
+msgstr ""
+
+# 92d53663e8c647a48c8463e6afdc86e5
+#: ../../source/overview/ui_recommendations.rst:101
+msgid "Order translation panel"
+msgstr ""
+
+# 782d0ec7cbcf4369be265e7660d90c74
+#: ../../source/overview/ui_recommendations.rst:103
+msgid ""
+"In this view the user will confirm the settings for translating one (or "
+"more) pieces of content and place an order. Depending on your app this might "
+"be a step in a publishing process, a part of another panel, or an individual "
+"panel within your system. You can allow the user to bundle a group of "
+"translations with the same settings together (a group of jobs), and to order "
+"multiple translations with different settings at the same time. Refer to the "
+"`translate/jobs/ (POST) <../v2/jobs.html#jobs-post>`__ method and `Translate "
+"API - Job Payload <../v2/payloads.html>`__ for more information."
+msgstr ""
+
+# 90273529a44c412ea3d1ac2fa42b07bd
+# e79aa942cc9941e5bf51df0b990358f8
+#: ../../source/overview/ui_recommendations.rst:113
+#: ../../source/overview/ui_recommendations.rst:244
+msgid "*The following apply per job or group of jobs:*"
+msgstr ""
+
+# 08e22f71910c4fee970c9436d0545cc3
+# 0fd23a3ef9884b76ae987600c3f39880
+# 1174482114c444a29633f0a48bf8fa40
+# 33b1e22b3d544caa9f6e27c0a4dee9ba
+# dfc376e07f43460f93a1225e43d58746
+# fe4d1fef0d3744669d9e363c6cb4468e
+# d8fbcb883baa4337847223ed3aa0069b
+# 17a3be447f8c4d94b367d61f381070a5
+# 46a33f437fcd4ce38f01123e9daf95cf
+#: ../../source/overview/ui_recommendations.rst:115
+#: ../../source/overview/ui_recommendations.rst:246
+#: ../../source/overview/ui_recommendations.rst:308
+#: ../../source/overview/ui_recommendations.rst:356
+#: ../../source/overview/ui_recommendations.rst:403
+#: ../../source/overview/ui_recommendations.rst:499
+#: ../../source/overview/ui_recommendations.rst:549
+#: ../../source/overview/ui_recommendations.rst:599
+#: ../../source/overview/ui_recommendations.rst:655
+msgid "**Required**"
+msgstr ""
+
+# 48d977ede27145a9bc3d7632f06c1f78
+#: ../../source/overview/ui_recommendations.rst:117
+msgid ""
+"Allow the user to select the source and target languages (lc\\_src and lc"
+"\\_tgt respectively)"
+msgstr ""
+
+# 78cfaa1145af4f45961faf5259039b68
+#: ../../source/overview/ui_recommendations.rst:119
+msgid ""
+"Allow the user to select the translation tier, including machine translation "
+"(tier)"
+msgstr ""
+
+# b93c0a726b5845a3963c0e3684c68b4c
+#: ../../source/overview/ui_recommendations.rst:121
+msgid "Indicate the content to be translated (body\\_src)"
+msgstr ""
+
+# 76c369d9a9d64fb4ad5858d6471d6a3b
+#: ../../source/overview/ui_recommendations.rst:122
+msgid ""
+"Display the *unit count* of the content to be translated (excluding units "
+"inside [[[…]]]). Note that 'unit count' means word count or character count "
+"for CJK languages"
+msgstr ""
+
+# 52e1dee7bdec429ebfb3367646761532
+#: ../../source/overview/ui_recommendations.rst:125
+msgid ""
+"Show the price at the chosen translation tier for the job or group of jobs "
+"(= unit price of language pair at selected translation tier × translatable "
+"unit count)"
+msgstr ""
+
+# 7983b816b1cc47ce957c98e0985d73e3
+#: ../../source/overview/ui_recommendations.rst:129
+msgid ""
+"**Note:** Users can wrap any text they don’t want translated in [[[…]]] "
+"(triple square brackets). For example, in “My teacher gave us [[[ 7 "
+"apples ]]] today”, the phrase “7 apples” won’t be translated. This feature "
+"is quite popular, so let your users know about it if possible."
+msgstr ""
+
+# 208b9cdefdfb403b9e7591a13e940c03
+#: ../../source/overview/ui_recommendations.rst:134
+msgid ""
+"**Caution:** If calculating unit count and price, don’t include units inside "
+"[[[…]]]."
+msgstr ""
+
+# 605281eae5a246ccb1cd0c31f91672b5
+#: ../../source/overview/ui_recommendations.rst:138
+msgid "Recommended"
+msgstr ""
+
+# 1a1c869d13944d9da7cbfbe6ed89fbb9
+#: ../../source/overview/ui_recommendations.rst:140
+msgid ""
+"Suggest the source language by pre-checking the content to be translated"
+msgstr ""
+
+# 179397273e6c4b41b7e088f5eb90fe6b
+#: ../../source/overview/ui_recommendations.rst:142
+msgid "Allow the user to add a comment for the translator (comment)"
+msgstr ""
+
+# 939ed0664d7f48618f2414a179b01223
+#: ../../source/overview/ui_recommendations.rst:143
+msgid "Allow the user to order multiple jobs, or a group of jobs, at once"
+msgstr ""
+
+# b472e92cbda64ef48c0c979e61d71d2c
+#: ../../source/overview/ui_recommendations.rst:145
+msgid ""
+"Allow the user to order a group of jobs with the same translation settings "
+"(as\\_group)"
+msgstr ""
+
+# 82f2fdd4f75443df948a00bb9169334e
+#: ../../source/overview/ui_recommendations.rst:148
+msgid ""
+"Preferably pre-set this according to the UI of your app, e.g. for a blog "
+"post include the post’s title, body and keywords fields as a group of jobs"
+msgstr ""
+
+# 7b249d7c6e5249ba92e2449ab22ecec8
+#: ../../source/overview/ui_recommendations.rst:152
+msgid ""
+"Allow the user to request translations in multiple languages in a single "
+"order (by creating one job per target language)"
+msgstr ""
+
+# 14b9389afce848c7bba840fda5812f1b
+#: ../../source/overview/ui_recommendations.rst:155
+msgid "If there’s more than one job show the order’s total price"
+msgstr ""
+
+# 466111fcd89e453ca553560cb8af5d90
+#: ../../source/overview/ui_recommendations.rst:158
+msgid "If possible"
+msgstr ""
+
+# 24a070550d8443dc9e0ea5f3c10156ad
+#: ../../source/overview/ui_recommendations.rst:160
+msgid "Allow the user to set automatic job approval per job (auto\\_approve)"
+msgstr ""
+
+# 1abf2a984f8542b7954bb488cbe1c447
+#: ../../source/overview/ui_recommendations.rst:161
+msgid "Show the estimated translation time (eta)"
+msgstr ""
+
+# 20fea77a4e124879bc3ecfb8eae162c2
+#: ../../source/overview/ui_recommendations.rst:162
+msgid ""
+"An option to use preferred translators, per job/group of jobs or per order "
+"(use\\_preferred)"
+msgstr ""
+
+# 12871b07a50e4760a83dd09c38f4cd0a
+#: ../../source/overview/ui_recommendations.rst:165
+msgid ""
+"**Note:** Preferred translators are translators the user has indicated "
+"they’d prefer to use again in a previous job’s feedback form, after "
+"evaluating the translator’s output. For a language pair, the user must have "
+"selected at least two preferred translators before this option is available."
+msgstr ""
+
+# f6a2220470724707b55d93cb6964b91a
+#: ../../source/overview/ui_recommendations.rst:200
+msgid ""
+"A translation panel wireframe for a group of jobs (preset by the application)"
+msgstr ""
+
+# 3882e2398eb4467abdabb4c2e7da268a
+#: ../../source/overview/ui_recommendations.rst:209
+msgid ""
+"Normal method: translate/jobs (POST) as an array of job payloads (one per "
+"body\\_src)"
+msgstr ""
+
+# b2ed8622ff0547f2b856a6d10150a5d7
+#: ../../source/overview/ui_recommendations.rst:219
+msgid "Translation jobs overview (essential)"
+msgstr ""
+
+# 3db1b3e33fe74198b0194aff0634d436
+#: ../../source/overview/ui_recommendations.rst:221
+msgid ""
+"This shows the current status of all translations that have been ordered "
+"through Gengo (ref: `translate/jobs (GET) <../v2/jobs.html#jobs-get>`__ "
+"method and `Job payload response <../v2/payloads.html#job-payload---for-"
+"responses>`__. You might make it a separate page, or simply add the "
+"information from Gengo to an existing UI. Content management systems often "
+"have a list of all articles, which can be a good place to add it."
+msgstr ""
+
+# 2bf65b76283a441b96216775a0f8027f
+#: ../../source/overview/ui_recommendations.rst:229
+msgid "**Statuses of jobs**"
+msgstr ""
+
+# 12a0749a01a3427482f9c7110ba1c6cb
+#: ../../source/overview/ui_recommendations.rst:231
+msgid "unpaid : Not enough funds to translate"
+msgstr ""
+
+# 3a033252ea064faa9928fdefaf1d3acb
+#: ../../source/overview/ui_recommendations.rst:233
+msgid "available : Awaiting translator"
+msgstr ""
+
+# fd66321483d44f9db40252800ecb8abc
+#: ../../source/overview/ui_recommendations.rst:235
+msgid "pending : Translating"
+msgstr ""
+
+# 2514c8cadb274b74be4121cc8167352c
+#: ../../source/overview/ui_recommendations.rst:237
+msgid "reviewable : Translated and awaiting approval"
+msgstr ""
+
+# 1da93ffcb6774d299a4ea32272e31fd7
+#: ../../source/overview/ui_recommendations.rst:239
+msgid "approved : User-approved translation"
+msgstr ""
+
+# 40885c3d0d6646109e35275f0b024747
+#: ../../source/overview/ui_recommendations.rst:241
+msgid ""
+"rejected : User-rejected translation awaiting new translatorcanceledUser "
+"canceled the translation before it began or when rejecting it"
+msgstr ""
+
+# de595e0f2aef4f46ab11a9e986bb4df0
+#: ../../source/overview/ui_recommendations.rst:248
+msgid "Status (status)"
+msgstr ""
+
+# d4af961870654f0c8cc875177f2efa20
+#: ../../source/overview/ui_recommendations.rst:249
+msgid "Timestamp when job was received by Gengo (ctime)"
+msgstr ""
+
+# 4e328230c97242ab8a81f2ca460c8514
+#: ../../source/overview/ui_recommendations.rst:250
+msgid "Translation tier (tier)"
+msgstr ""
+
+# 2a4290c6c77e4fa596fcb151d2496ab7
+#: ../../source/overview/ui_recommendations.rst:251
+msgid "Source and target languages (lc\\_src and lc\\_tgt respectively)"
+msgstr ""
+
+# 0de9dfdda20a4c75887fa0bcd085d8bc
+#: ../../source/overview/ui_recommendations.rst:252
+msgid ""
+"Unit count (word count, or character count for CKJ languages) (unit\\_count)"
+msgstr ""
+
+# a53265eec4054eab8924c3626856fa96
+#: ../../source/overview/ui_recommendations.rst:254
+msgid "Price (credits)"
+msgstr ""
+
+# f2551385943d4328b7da8aa1cc470761
+# 5acce59666cf45649c2f53523d5af250
+# 3e75485f482b4d2384ad870d9ebab22b
+# f3d82fe127fa42a4819a8cd5668d56fd
+# 52221d85168e4fbbba63e550f9537f7a
+# 13338ab13ffd4ad4be59ee1d984ec9b7
+# 730f95bee5cf4abebe10128b848ba100
+#: ../../source/overview/ui_recommendations.rst:256
+#: ../../source/overview/ui_recommendations.rst:313
+#: ../../source/overview/ui_recommendations.rst:364
+#: ../../source/overview/ui_recommendations.rst:448
+#: ../../source/overview/ui_recommendations.rst:503
+#: ../../source/overview/ui_recommendations.rst:555
+#: ../../source/overview/ui_recommendations.rst:609
+msgid "**Recommended**"
+msgstr ""
+
+# 838a6b6ecd86433abf1b9fe195372c0e
+#: ../../source/overview/ui_recommendations.rst:258
+msgid "Job # (job\\_id)"
+msgstr ""
+
+# ee15a9e4d676439daec061ab18ea5952
+#: ../../source/overview/ui_recommendations.rst:259
+msgid "Timestamp when the job was last updated with a comment or status change"
+msgstr ""
+
+# 203b2651ca1346b787e83a876ddd72b8
+#: ../../source/overview/ui_recommendations.rst:261
+msgid "Number of comments"
+msgstr ""
+
+# 50f60b18fab04baf8c1b2f1f5825b178
+#: ../../source/overview/ui_recommendations.rst:262
+msgid ""
+"“Cancel” button (if the job or group of jobs has the status available or "
+"unpaid)"
+msgstr ""
+
+# ac260664f50940d6ab73b007ad3436bd
+# 3a631733515d4f20b4289163ed4f4012
+# 54d27490936944e2a0b323651d984c20
+# eb0e07fda4a7494fa954f10092686d51
+#: ../../source/overview/ui_recommendations.rst:265
+#: ../../source/overview/ui_recommendations.rst:318
+#: ../../source/overview/ui_recommendations.rst:459
+#: ../../source/overview/ui_recommendations.rst:508
+msgid "**If possible**"
+msgstr ""
+
+# a50ca9b28aa44606ad81916a88890935
+#: ../../source/overview/ui_recommendations.rst:267
+msgid "Indicate when there are unread comments"
+msgstr ""
+
+# ccfa0fcd1add42d19ccfd24352012e9b
+#: ../../source/overview/ui_recommendations.rst:268
+msgid "Show the estimated completion time (eta)"
+msgstr ""
+
+# 72783f7e850e47cfb7c54c63b685b6d9
+#: ../../source/overview/ui_recommendations.rst:282
+msgid ""
+"Translation overview wireframe showing all recommended functionality (with a "
+"guide below)"
+msgstr ""
+
+# 68ad08d31f744fb38446dfc98b721cc3
+#: ../../source/overview/ui_recommendations.rst:291
+msgid "Normal method: translate/jobs (GET)"
+msgstr ""
+
+# 8bbad51a1da14a2cbcc0681a9f2780a2
+#: ../../source/overview/ui_recommendations.rst:300
+msgid "Pending job panel"
+msgstr ""
+
+# c7b322ed95d540a3a931393a5f83d4fe
+#: ../../source/overview/ui_recommendations.rst:302
+msgid ""
+"Depending on your app, you may choose to show pending translations (a status "
+"of available, pending, or unpaid) simply as normal data within your system, "
+"or you may wish to show them on their own specific page. If you do choose to "
+"have a discrete page, we recommend you also show the comment thread panel on "
+"this page."
+msgstr ""
+
+# 960ec118a33346d996d0c9f8b7b7df4f
+#: ../../source/overview/ui_recommendations.rst:310
+msgid ""
+"Allow the user to cancel an available or unpaid translation (pending jobs "
+"can not be cancelled)"
+msgstr ""
+
+# 055d1717563f42e29815fd07bddf5e57
+#: ../../source/overview/ui_recommendations.rst:315
+msgid ""
+"Show the submitted text (body\\_src) Show the estimated completion time (eta)"
+msgstr ""
+
+# 46aaaaa81d714aac9691c00e75f0e130
+#: ../../source/overview/ui_recommendations.rst:320
+msgid "Show a machine translation (body\\_tgt)"
+msgstr ""
+
+# 748005bfd0ab40fe8efc0202abba4589
+#: ../../source/overview/ui_recommendations.rst:333
+msgid ""
+"A basic pending job panel wireframe underneath the job’s overview information"
+msgstr ""
+
+# 31209e14ac544f96aa188285e71f40cf
+# 5d489620d72f4e008a593c39a373292e
+#: ../../source/overview/ui_recommendations.rst:342
+#: ../../source/overview/ui_recommendations.rst:533
+msgid "Normal method: translate/job/{id} (GET)"
+msgstr ""
+
+# 23a0398fc62641fa9a96dc4fa1453f05
+#: ../../source/overview/ui_recommendations.rst:351
+msgid "Comment thread panel"
+msgstr ""
+
+# 4f1a4fd9d1ce4f28b8d89cd00e1a1631
+#: ../../source/overview/ui_recommendations.rst:353
+msgid ""
+"The comment thread panel displays comments from the user, translator(s) and "
+"Gengo support regarding a job or group of jobs."
+msgstr ""
+
+# 2c754c1b66a542d883df48df088bc44b
+#: ../../source/overview/ui_recommendations.rst:358
+msgid "Show comments, including the following info per-comment:"
+msgstr ""
+
+# fbb92884427f46a6b435a0f028cebf47
+#: ../../source/overview/ui_recommendations.rst:360
+msgid "Comment (body)"
+msgstr ""
+
+# d392c10431f14b65ab539b80cf8dc994
+#: ../../source/overview/ui_recommendations.rst:361
+msgid "Author (author)"
+msgstr ""
+
+# 1396663932b64042a40efb2281c5b4af
+#: ../../source/overview/ui_recommendations.rst:362
+msgid "Timestamp (ctime)"
+msgstr ""
+
+# e12af27b52b34be488f3754a770aeee9
+#: ../../source/overview/ui_recommendations.rst:366
+msgid "Display comments from Gengo customer support differently"
+msgstr ""
+
+# df1138742cc743049c37921cbac9fbc0
+#: ../../source/overview/ui_recommendations.rst:367
+msgid "Show or link to previous revisions in the comment thread"
+msgstr ""
+
+# a79b907ea3114ed7bd5946d462052a65
+#: ../../source/overview/ui_recommendations.rst:380
+msgid "A simple comment thread wireframe"
+msgstr ""
+
+# 2312ca5f391f48159d122c8be0d650ec
+#: ../../source/overview/ui_recommendations.rst:388
+msgid "Normal method: translate/job/{id}/comments (GET)"
+msgstr ""
+
+# 07a1e670547845e1aa3c948862f2c568
+#: ../../source/overview/ui_recommendations.rst:397
+msgid "Comment submission panel"
+msgstr ""
+
+# 4e34f13b960b4e3187b4f3b49e4c6f67
+#: ../../source/overview/ui_recommendations.rst:399
+msgid ""
+"If a comment submission form is not provided in your app, we recommend "
+"including a link to the job’s details page on Gengo, using the URL `http://"
+"gengo.com/translate/job/details/{id}`."
+msgstr ""
+
+# 76693dc027df4a96a4b45c45d41bd649
+#: ../../source/overview/ui_recommendations.rst:405
+msgid "Comment field (body)"
+msgstr ""
+
+# c47cc92da7974ce88b00f83b65cca344
+#: ../../source/overview/ui_recommendations.rst:406
+msgid "“Submit” button"
+msgstr ""
+
+# 7a1aad49e35e4b46bc5a0800c0907a00
+#: ../../source/overview/ui_recommendations.rst:407
+msgid "Warn users not to submit or request personal details"
+msgstr ""
+
+# ba181bfc5caa46a5b005941c84aafcb5
+#: ../../source/overview/ui_recommendations.rst:408
+msgid "Prevent empty comment"
+msgstr ""
+
+# f484d07605a144c3ba06a24c28f4da00
+#: ../../source/overview/ui_recommendations.rst:421
+msgid "A comment submission panel wireframe"
+msgstr ""
+
+# 080acb4244914f1385cf60409ec66ed0
+#: ../../source/overview/ui_recommendations.rst:429
+msgid "Normal method: translate/job/{id}/comment (POST)"
+msgstr ""
+
+# e952b9bcc6bb4601af4137121e6f402c
+#: ../../source/overview/ui_recommendations.rst:438
+msgid "Feedback panel"
+msgstr ""
+
+# 42e54b100bdf48beacfaa563dcb22aec
+#: ../../source/overview/ui_recommendations.rst:440
+msgid ""
+"The feedback panel allows users to formally rate and comment on the "
+"translation (job or group of jobs) when they approve it. This is very "
+"valuable feedback that helps us improve Gengo’s service. You can also allow "
+"the user to add the translator to their preferred translators list. "
+"Currently the feedback form needs to be included within the job review form, "
+"as feedback is sent within the approve call using translate/job/{id} (PUT) "
+"approve."
+msgstr ""
+
+# a96767ae69ea4e4abc3b86f1e3395140
+#: ../../source/overview/ui_recommendations.rst:450
+msgid "Rating (rating, single choice)"
+msgstr ""
+
+# 6651412bfa94447eab36fdced387735c
+#: ../../source/overview/ui_recommendations.rst:452
+msgid "Include the rating guideline matrix — 1 (poor) to 5 (fantastic)"
+msgstr ""
+
+# b339599c740847608465f01f8756a793
+#: ../../source/overview/ui_recommendations.rst:454
+msgid "Feedback for translator (for\\_translator)"
+msgstr ""
+
+# decd2ccf1b2e4b74b8a187b336a17895
+#: ../../source/overview/ui_recommendations.rst:455
+msgid "Feedback for Gengo staff (for\\_mygengo, private)"
+msgstr ""
+
+# dbac5bb333dd483b8c0e02e0455cb277
+#: ../../source/overview/ui_recommendations.rst:456
+msgid ""
+"Allow the user to choose whether Gengo may use the translation as a public "
+"example (public)"
+msgstr ""
+
+# 018323e99b2f480c883c27a8392eb586
+#: ../../source/overview/ui_recommendations.rst:461
+msgid ""
+"Allow the user to add the translator to their preferred translators list"
+msgstr ""
+
+# 6a846059206e4182a2d0d4c56018e2e3
+#: ../../source/overview/ui_recommendations.rst:475
+msgid ""
+"A wireframe of a recommended feedback panel as part of the translation job "
+"review panel, for a group of jobs"
+msgstr ""
+
+# 0cd1f2d793014bef841697cedc3b3613
+#: ../../source/overview/ui_recommendations.rst:484
+msgid "Normal method: part of translate/job/{id} (PUT) approve"
+msgstr ""
+
+# 299d7237f2714bc7841bcbaec3b90cbd
+#: ../../source/overview/ui_recommendations.rst:493
+msgid "Approved job panel"
+msgstr ""
+
+# 117a8dc4d22f43e4bb693c0dc71d5e0e
+#: ../../source/overview/ui_recommendations.rst:495
+msgid ""
+"Depending on your app, you may choose to show approved jobs simply as normal "
+"data within your system, or you may wish to show them in their own specific "
+"panel."
+msgstr ""
+
+# 5e35d303178e4f6ab546293102979380
+#: ../../source/overview/ui_recommendations.rst:501
+msgid "The translated text (body\\_tgt)"
+msgstr ""
+
+# 92d86bc3f3ba40eaa1554b62985aec41
+#: ../../source/overview/ui_recommendations.rst:505
+msgid "The original text (body\\_src)"
+msgstr ""
+
+# fde146734bd64aadad0f396a2baa979f
+#: ../../source/overview/ui_recommendations.rst:506
+msgid "Any feedback submitted (rating, for\\_translator, for\\_mygengo)"
+msgstr ""
+
+# b06ceecd4eb94816a87323d7f865869f
+#: ../../source/overview/ui_recommendations.rst:510
+msgid "Comment thread (via translate/job/{id}/comments (GET))"
+msgstr ""
+
+# d25fec79065b4521abdb149f6640b5a0
+#: ../../source/overview/ui_recommendations.rst:511
+msgid ""
+"Show or link to previous revisions in the comment thread (via translate/job/"
+"{id}/revisions (GET))"
+msgstr ""
+
+# ced9a0ec227a4f9fb23e6b8b743de06b
+#: ../../source/overview/ui_recommendations.rst:525
+msgid "An approved job panel wireframe, including optional submitted feedback"
+msgstr ""
+
+# 2a8dbcdbc7114348b38d1b7299c1c74b
+#: ../../source/overview/ui_recommendations.rst:542
+msgid "Request revisions panel"
+msgstr ""
+
+# e3836513f6e04e7683c782e623a891a3
+#: ../../source/overview/ui_recommendations.rst:544
+msgid ""
+"The request revisions panel allows the user to request revisions from the "
+"job’s translator. If an in-app form is not provided, we recommend including "
+"a link to the job details page on Gengo, using the URL `http://gengo.com/"
+"translate/job/details/{id}`."
+msgstr ""
+
+# dd43a64ed2e94c178e793c06438885dc
+#: ../../source/overview/ui_recommendations.rst:551
+msgid ""
+"Comment field to let the translator know the reason(s) for requesting "
+"revisions, in as much detail as possible (comment)"
+msgstr ""
+
+# b2b791744f57421eb805ebb2ada933d1
+#: ../../source/overview/ui_recommendations.rst:553
+msgid "“Request revisions” button"
+msgstr ""
+
+# 52d2010115b145119142526b5d83bf7e
+#: ../../source/overview/ui_recommendations.rst:557
+msgid "Include Gengo’s revisions instructions"
+msgstr ""
+
+# dd815d029c05436c901ec33ea68659a9
+#: ../../source/overview/ui_recommendations.rst:558
+msgid ""
+"Include link to the Gengo FAQ (see “When should I reject a job? When should "
+"I request corrections?”)"
+msgstr ""
+
+# 0aa88ce8e54246069231ece53e02170d
+#: ../../source/overview/ui_recommendations.rst:560
+msgid ""
+"Remind the user to write the comment in the source language or target "
+"language"
+msgstr ""
+
+# 200005932044402fabf41b3c8ce522e4
+#: ../../source/overview/ui_recommendations.rst:574
+msgid "A request revisions panel wireframe"
+msgstr ""
+
+# 7babb41d2b154e1cba55d6870ff41d23
+# a053ce3b3de04689b0e35c070a92f54b
+#: ../../source/overview/ui_recommendations.rst:582
+#: ../../source/overview/ui_recommendations.rst:636
+msgid "Normal method: translate/job/{id} (PUT)"
+msgstr ""
+
+# f6bb95fbfb5c4c6586048d81f76392cb
+#: ../../source/overview/ui_recommendations.rst:591
+msgid "Job rejection panel"
+msgstr ""
+
+# 97a92c499f064a00a74c8f33d6427702
+#: ../../source/overview/ui_recommendations.rst:593
+msgid ""
+"The job rejection panel allows the user to reject a specific job, and "
+"requires that the user answer a simple captcha to verify the rejection. If "
+"an in-app form is not provided, we recommend including a link to the job "
+"details page on Gengo, using the URL `http://gengo.com/translate/job/details/"
+"{id}`."
+msgstr ""
+
+# 2b5e386588f84f008715e1bb34fc5c39
+#: ../../source/overview/ui_recommendations.rst:601
+msgid ""
+"Reason for rejection (from presets “quality”, “incomplete”, “other”) (reason)"
+msgstr ""
+
+# 8474a1d876424224996ddd268b4c5c9d
+#: ../../source/overview/ui_recommendations.rst:603
+msgid "Comment field to explain the reason for rejection (comment)"
+msgstr ""
+
+# b6242bb72e4a4e019209072123a79e8c
+#: ../../source/overview/ui_recommendations.rst:604
+msgid "Captcha image"
+msgstr ""
+
+# 338505ddc2874d36b2bcfe16ba188b62
+#: ../../source/overview/ui_recommendations.rst:605
+msgid "Captcha text field (captcha)"
+msgstr ""
+
+# 15330d64d44142e3a3fb14e463f528f5
+#: ../../source/overview/ui_recommendations.rst:606
+msgid ""
+"“Reject” button (by default this will pass the job to another translator, "
+"follow\\_up = \"requeue\")"
+msgstr ""
+
+# f9c53224524a4ad4900bee3356763556
+#: ../../source/overview/ui_recommendations.rst:611
+msgid "Ask user if they would like to use the request revisions instead"
+msgstr ""
+
+# ad3ccd87d0b340f6b593a72945bf005c
+#: ../../source/overview/ui_recommendations.rst:612
+msgid "Include Gengo’s rejection instructions"
+msgstr ""
+
+# 828234fa83c44736a6aae98eee404724
+#: ../../source/overview/ui_recommendations.rst:613
+msgid ""
+"Include link to the Gengo FAQ (see “When should I reject a job? When should "
+"I request corrections?”) Change “Reject” button to “Reject and reopen”, and "
+"add a “Reject and close” button (follow\\_up = \"cancel\")"
+msgstr ""
+
+# 9d218d94ba5242a68965930d0dafc2fb
+#: ../../source/overview/ui_recommendations.rst:628
+msgid "A job rejection panel wireframe"
+msgstr ""
+
+# b97335a6bae2457eabe3e8f69fc0de70
+#: ../../source/overview/ui_recommendations.rst:645
+msgid "Settings panel"
+msgstr ""
+
+# 2043eb8415c641c5869ea5c5127040d8
+#: ../../source/overview/ui_recommendations.rst:647
+msgid ""
+"The settings panel allows the user to set their public and private API keys, "
+"and define default settings for job orders. You may also place other "
+"settings information in this page that is specific to how your app works "
+"with the Gengo API. For instance you may allow the user to set the default "
+"translation tier for new jobs. The user might not change these settings "
+"themselves — they may be set centrally or through a configuration file."
+msgstr ""
+
+# 018fb084bf8d4d8c8678b4499ec19cd7
+#: ../../source/overview/ui_recommendations.rst:657
+msgid "Update API public key"
+msgstr ""
+
+# 323b604697f4410e830448e24e02fda9
+#: ../../source/overview/ui_recommendations.rst:658
+msgid "Update API private key"
+msgstr ""
+
+# efde5818ef6b4e719d376ca41bb5ff08
+#: ../../source/overview/ui_recommendations.rst:660
+msgid "**Potential options**"
+msgstr ""
+
+# 4ab1d58312e841f4b8ec1d4407550950
+#: ../../source/overview/ui_recommendations.rst:662
+msgid "Use preferred translators by default"
+msgstr ""
+
+# 9914cbee8dbe4babaf0af9298711458e
+#: ../../source/overview/ui_recommendations.rst:663
+msgid "Approve all jobs automatically"
+msgstr ""
+
+# d7040505f34f4ce5a6b5b3589eadc52a
+#: ../../source/overview/ui_recommendations.rst:664
+msgid "Set a custom email notification address"
+msgstr ""
+
+# 49feb41ab22543ecae578bdffffd61d4
+#: ../../source/overview/ui_recommendations.rst:677
+msgid "A simple settings panel wireframe"
+msgstr ""
+
+# 89d14d59289e403b9fa90a9ec4c289ff
+#: ../../source/overview/ui_recommendations.rst:694
+msgid ""
+"A remaining credits panel wireframe, allowing the user to top up their "
+"credits"
+msgstr ""
+
+# 7e3373de14e34440a0c28524d51bf311
+#: ../../source/overview/ui_recommendations.rst:703
+msgid "Normal method: account/balance (GET)"
+msgstr ""

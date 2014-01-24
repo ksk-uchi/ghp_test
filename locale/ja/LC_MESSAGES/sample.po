@@ -1,0 +1,43 @@
+# Japanese translations for Gengo API Documentation package.
+# Copyright (C) 2008-2014 Gengo, Inc
+# This file is distributed under the same license as the Gengo API Documentation package.
+# Automatically generated, 2014.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Gengo API Documentation \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-01-20 16:10\n"
+"PO-Revision-Date: 2014-01-20 14:16\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# fb9153e287814d998a57811d650edf9b
+#: ../../source/sample.rst:3
+msgid "this is sample ReST"
+msgstr ""
+
+# d7330758f6714506b5c6075fb07cc922
+#: ../../source/sample.rst:7
+msgid "first section"
+msgstr ""
+
+# 6763867397ce4d7a808c81fdaed74401
+#: ../../source/sample.rst:9
+msgid "It is such cold today."
+msgstr ""
+
+# 6768380500ae4bc984d58a1257041a24
+#: ../../source/sample.rst:10
+msgid "I need more clothes."
+msgstr ""
+
+# d968c90adc98490383e50f3f9ad8b7eb
+#: ../../source/sample.rst:14
+msgid "API document sample"
+msgstr ""

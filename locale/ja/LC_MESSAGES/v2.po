@@ -1,0 +1,849 @@
+# Japanese translations for Gengo API Documentation package.
+# Copyright (C) 2008-2014 Gengo, Inc
+# This file is distributed under the same license as the Gengo API Documentation package.
+# Automatically generated, 2014.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Gengo API Documentation \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-01-20 18:52\n"
+"PO-Revision-Date: 2014-01-20 14:16\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# 1017f2d75c5f4a8793a3ede7de48de5b
+#: ../../source/v2/account.rst:2
+msgid "Account methods"
+msgstr ""
+
+# 69c082034fe042298cb99910f2f1137c
+#: ../../source/v2/account.rst:4
+msgid ""
+"This describes the endpoints that deal with Account information on Gengo API."
+msgstr ""
+
+# 690171bc613c4469afc58fc3b2b452a9
+#: ../../source/v2/account.rst:12
+msgid "Stats (GET)"
+msgstr ""
+
+# 086095e18dc24162b0ff3c5d4d22fe18
+# 05dac5d16d2546e4905e6a093a7f0f6f
+# 66e5b998f5b74fc98abec3592df32964
+# a21b36757c58464f8cba0bd93764d78d
+# da62f033b888488d8fa0e0e993d51993
+# 5a17338dca1946fc8c90ec9ed714ad0a
+# 137cf5a02f4f4688876f1884b166f78b
+# 6eaed3d742204938b9d19e0b6783659a
+# 89841eec7b054d6a802216c0605197c2
+# c7f3dbf7bca54401909867f70a628b9f
+# 2e5776c84e7a457abb31ffc20738828d
+# 990f19ebdc7c410196e49d548f54e12c
+# a3a6c34aecb4469f8dda6a6c87008141
+# e705c898d29e49f480880608cd59ead0
+# c5b55d41c81149409e963b24d5175ac6
+# 9bc6dec831e74f038186acaaca7ccebe
+# c437dbdd31ac4150b645073e424396e8
+# 195aced4c29249bca052438fa9c0c5e2
+# 01c6ad9713074f3a9acd6cb951655074
+# f98040deda2046f9a0dd2dcb7544bd51
+#: ../../source/v2/account.rst:15 ../../source/v2/account.rst:44
+#: ../../source/v2/account.rst:73 ../../source/v2/glossary.rst:14
+#: ../../source/v2/glossary.rst:43 ../../source/v2/job.rst:15
+#: ../../source/v2/job.rst:47 ../../source/v2/job.rst:97
+#: ../../source/v2/job.rst:127 ../../source/v2/job.rst:156
+#: ../../source/v2/job.rst:187 ../../source/v2/job.rst:216
+#: ../../source/v2/job.rst:247 ../../source/v2/jobs.rst:14
+#: ../../source/v2/jobs.rst:117 ../../source/v2/jobs.rst:159
+#: ../../source/v2/order.rst:15 ../../source/v2/order.rst:46
+#: ../../source/v2/service.rst:15 ../../source/v2/service.rst:49
+#: ../../source/v2/service.rst:79 ../../source/v2/service.rst:116
+msgid "**Summary** :"
+msgstr ""
+
+# ef898f1090e443859e0bcd07353a1176
+#: ../../source/v2/account.rst:15
+msgid "Retrieves account stats, such as orders made."
+msgstr ""
+
+# 9962aa338e9743e39d8eae2eb21ac111
+# 7bcddbf8730b4b0b8ac44e26d9c11ce3
+# 5e5cad78e8b0495ea9a11647818fd692
+# 676f18b5c75f470a902b21957e7ca9e5
+# 074c0307db5e4166aad9a859db0fc18c
+# 1729f0fb1073486aa3ac9a03ba3c261e
+# 0e3152df124943c3af85b64c0ec3f0d9
+# 446eea7e35534c589b8c0d0ac8283935
+# 609201a16e08400c83d5f691b9a254a7
+# d2b47885347546b7b755dfe28deb6983
+# 2ec97b66b44e4e63b6ecd9a56f54cbb2
+# 7a80b04bc6cb4fafba9fe5faa4971e35
+# 9627fc07659c4635a3277a7f1fe2615c
+# 84ee85f97868423d87b4a5ebb61e5c23
+# 0521e92b69974fc9ac04d6948e8b77c4
+# 54d0daf1e927434caf1c4fa5b669b107
+# c617481a11994cc394af44b1e25ee3f9
+# 16fc81a817994e02b59c10ab21074d1f
+# 9568abc83ad749e6947b0c21a0c67924
+# de04d95fa64947c19d27475c58c933aa
+#: ../../source/v2/account.rst:18 ../../source/v2/account.rst:47
+#: ../../source/v2/account.rst:76 ../../source/v2/glossary.rst:17
+#: ../../source/v2/glossary.rst:46 ../../source/v2/job.rst:18
+#: ../../source/v2/job.rst:50 ../../source/v2/job.rst:100
+#: ../../source/v2/job.rst:130 ../../source/v2/job.rst:159
+#: ../../source/v2/job.rst:190 ../../source/v2/job.rst:219
+#: ../../source/v2/job.rst:250 ../../source/v2/jobs.rst:17
+#: ../../source/v2/jobs.rst:120 ../../source/v2/jobs.rst:162
+#: ../../source/v2/order.rst:18 ../../source/v2/order.rst:49
+#: ../../source/v2/service.rst:18 ../../source/v2/service.rst:52
+#: ../../source/v2/service.rst:82 ../../source/v2/service.rst:122
+msgid "**URL** :"
+msgstr ""
+
+# ba1c3eb25c6249e089afc12fe9cd9c63
+#: ../../source/v2/account.rst:18
+msgid "`http://api.gengo.com/v2/account/stats`"
+msgstr ""
+
+# a9709216cdeb41da9f59e733117cc988
+# 5f19e46b6aaa4b21ac6d6885e06ee3ec
+# dc877189e2fe48dab2894d82335b1d71
+# 058ac7314ffb4bc79670ccb6edfb4dfb
+# a4c894ac65b14c7d81541f5497b9686e
+# 17b67a8025b54b7286dcf5c23c6578a5
+# bc8ee629784f41389d5659da8a6298db
+# 7760425292464eab92070d3a98482d53
+# 953dee0522024aa590b3c7c5102dd574
+# 0c497ff5a1c9442188191d0a0c6cf276
+# e8a644ea105c4e53a7d50359b9b5a317
+# 34c4571e5c2b4764bd5ff7b823905a24
+# 723e0dfd76ee4b598aba04df21167a66
+# da1d9fdd2d2a4c84bb5f3b171f01c792
+# 0154564fba6944ce87b7cb70672d682c
+# 9abf85e7fb9a4c99b1021ae7cb42ddcb
+# bc9742ee7ef74aa9aac91f4d16ebf648
+# bd3c98e1167f433bbc6886a4d5e9d65c
+# a67be99b4f7f4b8894f7000ac4970088
+# 7cc8d1d50cdb4cc98cb9ca587312bce7
+#: ../../source/v2/account.rst:21 ../../source/v2/account.rst:50
+#: ../../source/v2/account.rst:79 ../../source/v2/glossary.rst:20
+#: ../../source/v2/glossary.rst:49 ../../source/v2/job.rst:21
+#: ../../source/v2/job.rst:53 ../../source/v2/job.rst:103
+#: ../../source/v2/job.rst:133 ../../source/v2/job.rst:162
+#: ../../source/v2/job.rst:193 ../../source/v2/job.rst:222
+#: ../../source/v2/job.rst:253 ../../source/v2/jobs.rst:20
+#: ../../source/v2/jobs.rst:123 ../../source/v2/jobs.rst:165
+#: ../../source/v2/order.rst:21 ../../source/v2/order.rst:52
+#: ../../source/v2/service.rst:21 ../../source/v2/service.rst:55
+#: ../../source/v2/service.rst:85 ../../source/v2/service.rst:125
+msgid "**Authentication** :"
+msgstr ""
+
+# 0d49141327e64047b5c3268748db753d
+# df0609a93d6f42f1806916413514a397
+# ad83f36492794cc39f01dd6c5a3bafcc
+# 92dcb98d5b69470ebce79610d4a8d30c
+# dc0a1b8c34454d4aa46f6f6177e8dae2
+# f25f90a3837a4b81be752d08888227fc
+# df6ea24ee8204778bf1f419c1d27f378
+# 1b49c1363dba4d7581fa161a356cd927
+# 8cd881793ef84ecfb4f8b767c43320fc
+# 96364e7cfc0f43fbad67d22e9ead31ae
+# cffd6c629b0449fdb9ed50819f284493
+# 6c740fcd764b4c6d8d95bf6475e023aa
+# 6d7a044dc91847a9ad246c01fdcd28bf
+# 0bf5085750c043bc95cdd59f436a9727
+# d521b64b64694393824a33664e03f9f2
+# 43f58a5661d246a6a7156a0b54483792
+# a875a66d446c4d7890aaba10dc153f39
+# 80536a422d5f432e911cb7d0525d5e41
+#: ../../source/v2/account.rst:21 ../../source/v2/account.rst:50
+#: ../../source/v2/account.rst:79 ../../source/v2/glossary.rst:20
+#: ../../source/v2/glossary.rst:49 ../../source/v2/job.rst:21
+#: ../../source/v2/job.rst:53 ../../source/v2/job.rst:103
+#: ../../source/v2/job.rst:133 ../../source/v2/job.rst:162
+#: ../../source/v2/job.rst:193 ../../source/v2/job.rst:222
+#: ../../source/v2/job.rst:253 ../../source/v2/jobs.rst:20
+#: ../../source/v2/jobs.rst:123 ../../source/v2/jobs.rst:165
+#: ../../source/v2/order.rst:21 ../../source/v2/order.rst:52
+#: ../../source/v2/service.rst:85 ../../source/v2/service.rst:125
+msgid "Required"
+msgstr ""
+
+# 7d07834860664c9c932fde3ae6e100b8
+# f456c0c5043e4af3bf230940216a9273
+# fb59e91edcfc49f789d09ed78b66ae14
+# e642f4da44364801be847b10993a7522
+# 381859be4a2e4d138db03756c7303646
+# d84c83bee8e741dfaf59660f100385b9
+# 7796d957065d4badbec45ae017703096
+# 78e49faa477e4619a2cca1953c623e22
+# 172c66c73fed4217a832dcdbbd501b4e
+# fac5b11968064ad89aa2999bb5bf8717
+# abad066a4c684ff5b17e48a592843aba
+# aa6ea45ba5904ccfac751bccdfb6e192
+# 0b215d504f7446bc8f87dd9155d2dde0
+# 42272bd74d774450bc0792d3c90f14d6
+# 95412bc496454d1e90e4efe980d39465
+# 9fdd261c2d794c119e09a2ed4f699299
+# 1085263eb5c94f5e97bd4db239bf41f8
+# cf3f36c3f0e747518f5bede74f7d5e76
+# 1566e7f8cd5a4d9e985c5f952011f2fc
+# eae4d9a7b4ac434a8312d426c6fb4cc9
+#: ../../source/v2/account.rst:26 ../../source/v2/account.rst:55
+#: ../../source/v2/account.rst:84 ../../source/v2/glossary.rst:25
+#: ../../source/v2/glossary.rst:54 ../../source/v2/job.rst:29
+#: ../../source/v2/job.rst:58 ../../source/v2/job.rst:108
+#: ../../source/v2/job.rst:138 ../../source/v2/job.rst:167
+#: ../../source/v2/job.rst:198 ../../source/v2/job.rst:227
+#: ../../source/v2/job.rst:258 ../../source/v2/jobs.rst:25
+#: ../../source/v2/jobs.rst:128 ../../source/v2/jobs.rst:170
+#: ../../source/v2/order.rst:26 ../../source/v2/order.rst:57
+#: ../../source/v2/service.rst:26 ../../source/v2/service.rst:60
+#: ../../source/v2/service.rst:90 ../../source/v2/service.rst:130
+msgid "**Parameters** :"
+msgstr ""
+
+# 16839ba6efaf4048b9f607dd5a206d28
+# eca41e35384a43d78ef252a8c587b28b
+# ceaa28c475a044a59ea2c279b144ec02
+# 904f7cb3cf0344eea9bd41f2f585078d
+# 1f7e6bb5a1fb4530a806453ca52242db
+# 8aaf4f2601a842488a017e36e25a230a
+# 83810481e05a48beb312e01a93d90fc6
+# 7aca7b3db5e645d4b8ac0c31eded3c94
+# 9ee63212c32348a7b518cc6a1cbd294e
+# 95ca15faf209424aa59c2674b3b2ac16
+# ef08ee2ab29a45219c49b84929f3de0a
+# fde65f2154e249dd9f4ae71dff7e1dc4
+# 9906de66d7494db48650ad1a49b1ed52
+# 984d6abeb0c04ec9a5fd5bc86524c401
+# ff815a84439e4f33ae6c95e09ddf416a
+# e178910cc96f48f8bdcda4849eef8086
+# 64c7b2fad5c8435383562ddea773c628
+# bc003d429a184adeb42c12e97f4c44a8
+# ba970530e0d3467ea49d7ee2bb5790fb
+# 5e2f8bf2cd874ff19ca2bec781c032e1
+# 7ba9b6a45e7e4537a3bb2abce186f431
+# 0810a792385d45f48b0c6a76a08ff8bf
+#: ../../source/v2/account.rst:28 ../../source/v2/account.rst:57
+#: ../../source/v2/account.rst:86 ../../source/v2/glossary.rst:27
+#: ../../source/v2/glossary.rst:56 ../../source/v2/job.rst:31
+#: ../../source/v2/job.rst:80 ../../source/v2/job.rst:110
+#: ../../source/v2/job.rst:140 ../../source/v2/job.rst:169
+#: ../../source/v2/job.rst:200 ../../source/v2/job.rst:231
+#: ../../source/v2/job.rst:262 ../../source/v2/jobs.rst:41
+#: ../../source/v2/jobs.rst:142 ../../source/v2/jobs.rst:172
+#: ../../source/v2/order.rst:28 ../../source/v2/order.rst:59
+#: ../../source/v2/service.rst:33 ../../source/v2/service.rst:62
+#: ../../source/v2/service.rst:96 ../../source/v2/service.rst:138
+msgid "**Example call**"
+msgstr ""
+
+# 1085c5ed0af44c03b0acbeeb5add55d1
+# 211dd82394d54d87ab219396392cff76
+# c8aa31c0713d494ea1a40ac233e76d3c
+# 96987d933d0d40818232e487ee666ca4
+# 2a86468a5f30477eaa8a152096e8948a
+# 8a1a9b2d19784cf79351f0c827ae3b9e
+# fe10d1e50f21436a8b663b9708f447ff
+# 384966664798460fafe8d33a1f7ec1dc
+# 59275d687e55491c8b860996c9294ed2
+# d8fcb44b76fb4a43a7f9c3a5b5e2daf8
+# 5e389d636d6e4607bb26ba9a01e4dd59
+# 3d46aac4057d4d53930ecaaa0bf2deb0
+# d6fc26be368a4d66baec62a3388d1a2f
+# ca409c6d47d7473d9afcea52d3ed3fbe
+# 858e2a46228e4b79acf000349757bb6f
+# 75b1777496634453a525eacde552c047
+# a6f8f9eb09fe4a0ca709724708b08e82
+# d37d2e1fa054459e841effb84198e3b6
+# f36e45d947dc4ea5acac3a58b9a139f3
+# 98fd04d382734d54bfd96a8d0d2d82ee
+# 21f79875e57941eca864db23ec383d1a
+# ddddaae9728e43449196fc10f74e02d3
+#: ../../source/v2/account.rst:34 ../../source/v2/account.rst:63
+#: ../../source/v2/account.rst:92 ../../source/v2/glossary.rst:33
+#: ../../source/v2/glossary.rst:62 ../../source/v2/job.rst:37
+#: ../../source/v2/job.rst:86 ../../source/v2/job.rst:116
+#: ../../source/v2/job.rst:146 ../../source/v2/job.rst:175
+#: ../../source/v2/job.rst:206 ../../source/v2/job.rst:237
+#: ../../source/v2/job.rst:268 ../../source/v2/jobs.rst:47
+#: ../../source/v2/jobs.rst:148 ../../source/v2/jobs.rst:178
+#: ../../source/v2/order.rst:34 ../../source/v2/order.rst:65
+#: ../../source/v2/service.rst:39 ../../source/v2/service.rst:68
+#: ../../source/v2/service.rst:102 ../../source/v2/service.rst:144
+msgid "**Response**"
+msgstr ""
+
+# 1966a7982718404698cc939fea5dd1e0
+#: ../../source/v2/account.rst:41
+msgid "Balance (GET)"
+msgstr ""
+
+# c0f13602ee374d19a9cd30f8d553ea9c
+#: ../../source/v2/account.rst:44
+msgid "Retrieves account balance in credits."
+msgstr ""
+
+# 7ec7e8b0b726451fb3be41cf8ac52540
+#: ../../source/v2/account.rst:47
+msgid "`http://api.gengo.com/v2/account/balance`"
+msgstr ""
+
+# 0a1dbc58036f44b1a16da9b9448cbb14
+#: ../../source/v2/account.rst:70
+msgid "Preferred translators (GET)"
+msgstr ""
+
+# db056286600941768b2308c68c3dfbed
+#: ../../source/v2/account.rst:73
+msgid "Retrieves preferred translators set by user."
+msgstr ""
+
+# a2c6385b02ab419481fd71aeaaf2dc1d
+#: ../../source/v2/account.rst:76
+msgid "`http://api.gengo.com/v2/account/preferred\\_translators`"
+msgstr ""
+
+# 90a90e73b4bd45669cd8ca5eb3f3b8ef
+#: ../../source/v2/glossary.rst:2
+msgid "Glossary methods"
+msgstr ""
+
+# 0bb33074132d4e1d978aef7b48e52b07
+#: ../../source/v2/glossary.rst:4
+msgid ""
+"This describes the endpoints that deal with Glossaries on the Gengo API."
+msgstr ""
+
+# ed5951d93c154fbe962408a7da0c91f0
+#: ../../source/v2/glossary.rst:11
+msgid "Glossaries (GET)"
+msgstr ""
+
+# 0d25e667b7b246c8893000550de0453d
+#: ../../source/v2/glossary.rst:14
+msgid "Retrieves a list of glossaries that belongs to the authenticated user"
+msgstr ""
+
+# 9a5efc022b544c40b6d0d82ffc2dc5c8
+#: ../../source/v2/glossary.rst:17
+msgid "`http://api.gengo.com/v2/translate/glossary`"
+msgstr ""
+
+# 5a5691700e264bcb87f42aeb7ea31da8
+#: ../../source/v2/glossary.rst:40
+msgid "Glossary (GET)"
+msgstr ""
+
+# efc34c8ada4b49369184d56a9894f341
+#: ../../source/v2/glossary.rst:43
+msgid "Retreives a glossary by Id"
+msgstr ""
+
+# 28a38df042b14cac9a2aa6590cc608fd
+#: ../../source/v2/glossary.rst:46
+msgid "`http://api.gengo.com/v2/translate/glossary/{glossary\\_id}`"
+msgstr ""
+
+# 7849bdd7fe074148965b835d844caeb5
+#: ../../source/v2/job.rst:2
+msgid "Job methods"
+msgstr ""
+
+# 66e8f33711574f0b88bab64cf7bca195
+#: ../../source/v2/job.rst:4
+msgid ""
+"This describes the endpoints that deal with singular Job tasks and "
+"information on Gengo API."
+msgstr ""
+
+# d711e2e1baeb44ed85dd700fc2b42d5a
+#: ../../source/v2/job.rst:12
+msgid "Job (GET)"
+msgstr ""
+
+# 4063af048589486c9f74f2185577f61e
+#: ../../source/v2/job.rst:15
+msgid "Retrieves a specific job."
+msgstr ""
+
+# 7386e2c10b5248968ecf220409a8942e
+# 309b024af7c34750a2128f85e30a9265
+# 9ce8d7f8c48942bcb76ba4c9afcfe1d4
+#: ../../source/v2/job.rst:18 ../../source/v2/job.rst:50
+#: ../../source/v2/job.rst:100
+msgid "`http://api.gengo.com/v2/translate/job/{id}`"
+msgstr ""
+
+# 39283d37a0f042c4b956b7f177c8de64
+#: ../../source/v2/job.rst:44
+msgid "Job (PUT)"
+msgstr ""
+
+# 97ee3ffb035f4c81a108af2fa71a5429
+#: ../../source/v2/job.rst:47
+msgid "Updates a job to translate."
+msgstr ""
+
+# caefacf4eef44027945bd7237dff8915
+# c2c18fbced504cd38ef89a9fcbe1c168
+# 43236640d8bb486ea7dde4aa2467734a
+# 4ba35709cc0e4e57931e009be7a2d8bb
+# dc4675069d48424a944b276cf777f41d
+# 5754c02b976a4ba88c352b8b45f82588
+#: ../../source/v2/job.rst:78 ../../source/v2/jobs.rst:39
+#: ../../source/v2/jobs.rst:133 ../../source/v2/service.rst:31
+#: ../../source/v2/service.rst:94 ../../source/v2/service.rst:136
+msgid "**Data arguments** :"
+msgstr ""
+
+# 3578a9552dd3430f928a77e21b645b0a
+#: ../../source/v2/job.rst:78
+msgid "action(required):"
+msgstr ""
+
+# bc7c6104538741179bbb52174accfb67
+#: ../../source/v2/job.rst:62
+msgid ""
+"\"revise\" - Returns this job back to the translator for revisions. Other "
+"parameters:"
+msgstr ""
+
+# 96d36fcb2e5042378e0bad924dbc4a88
+#: ../../source/v2/job.rst:67
+msgid "\"approve\" - Approves job. Other parameters:"
+msgstr ""
+
+# a08ae47f96ea45ada91d545552e17f3d
+#: ../../source/v2/job.rst:78
+msgid ""
+"\"reject\" - Rejects the translation. Please see our FAQs for details of the "
+"rejection process. Other parameters:"
+msgstr ""
+
+# b5ee06720a9848aab48e6b31d6e03043
+#: ../../source/v2/job.rst:93
+msgid "Job (DELETE)"
+msgstr ""
+
+# 21325a68e0104d6d8e4c47f7c7c6afab
+#: ../../source/v2/job.rst:96
+msgid ""
+"Cancels the job. You can only cancel a job if it has not been started "
+"already by a translator."
+msgstr ""
+
+# aa699619f781413eb847337ca3660736
+#: ../../source/v2/job.rst:123
+msgid "Revisions (GET)"
+msgstr ""
+
+# fb4e4e3e80e844df97154db35778f5d2
+#: ../../source/v2/job.rst:126
+msgid ""
+"Gets list of revision resources for a job. Revisions are created each time a "
+"translator or Senior Translator updates the text."
+msgstr ""
+
+# c884f31b8e004ec3b4c052a75a24762e
+#: ../../source/v2/job.rst:130
+msgid "`http://api.gengo.com/v2/translate/job/{id}/revisions`"
+msgstr ""
+
+# b57d6aa5ef2e4610b183e95e4d770e01
+#: ../../source/v2/job.rst:153
+msgid "Revision (GET)"
+msgstr ""
+
+# 33e83e2e7ef94b9eb50870e340f72135
+# efe837c06f804377a6082b3d1908051f
+#: ../../source/v2/job.rst:156 ../../source/v2/job.rst:184
+msgid "Gets a specific revision for a job."
+msgstr ""
+
+# 70a2aa7ce86745fdb8bc74036d200973
+#: ../../source/v2/job.rst:159
+msgid "`http://api.gengo.com/v2/translate/job/{id}/revision/{rev\\_id}`"
+msgstr ""
+
+# 3e59d5b6f6cd45f98eade9cc63e1d51a
+#: ../../source/v2/job.rst:182
+msgid "Feedback (GET)"
+msgstr ""
+
+# d285b9f8399f4cb4a26034cb19dc99ad
+#: ../../source/v2/job.rst:187
+msgid "Retrieves the feedback you have submitted for a particular job."
+msgstr ""
+
+# f9199e6f6b0e416c83701c7ab7a254a2
+#: ../../source/v2/job.rst:190
+msgid "`http://api.gengo.com/v2/translate/job/{id}/feedback`"
+msgstr ""
+
+# ffb4061bcb6a4c53b23ebc9f84a9770d
+#: ../../source/v2/job.rst:213
+msgid "Comments (GET)"
+msgstr ""
+
+# a56b4b2c87184f4ca4134809228ca281
+#: ../../source/v2/job.rst:216
+msgid "Retrieves the comment thread for a job."
+msgstr ""
+
+# ebf45f8d0cf64b8c821a05e41b927eaf
+#: ../../source/v2/job.rst:219
+msgid "`http://api.gengo.com/v2/translate/job/{id}/comments`"
+msgstr ""
+
+# 75ac18f9b0bc4fbabef664e342c8d9b6
+#: ../../source/v2/job.rst:229
+msgid ""
+"**Note** : Possible values for \"author\" are \"customer\" or \"worker\"."
+msgstr ""
+
+# dee3038755214145891dee07c11b4879
+#: ../../source/v2/job.rst:244
+msgid "Comment (POST)"
+msgstr ""
+
+# c80e16e553564f299fede430eab49316
+#: ../../source/v2/job.rst:247
+msgid "Submits a new comment to the job's comment thread."
+msgstr ""
+
+# dd81528c8f67430594fb1d18e937e5cc
+#: ../../source/v2/job.rst:250
+msgid "`http://api.gengo.com/v2/translate/job/{id}/comment`"
+msgstr ""
+
+# 3698d029bc0441b9b7840b27b1c20852
+#: ../../source/v2/job.rst:260
+msgid "**Data arguments** : \\* body(required): The comment body"
+msgstr ""
+
+# 84fc0634c3ed44d7b9d17edcd8ec3851
+#: ../../source/v2/jobs.rst:2
+msgid "Jobs methods"
+msgstr ""
+
+# 4bec57c12138425ea1ca5510bac45418
+#: ../../source/v2/jobs.rst:4
+msgid "This describes the endpoints that deal with Jobs on the Gengo API."
+msgstr ""
+
+# b02e68eb80eb4376972bf14090905ee0
+#: ../../source/v2/jobs.rst:11
+msgid "Jobs (POST)"
+msgstr ""
+
+# f8fff5966ae14da8af22fbdf3e70290e
+#: ../../source/v2/jobs.rst:14
+msgid "Submits a job or group of jobs to translate."
+msgstr ""
+
+# a87698be0f8f4af29aaa540908651dcd
+# 7f503add0e2142a08578deccdb9c3e63
+#: ../../source/v2/jobs.rst:17 ../../source/v2/jobs.rst:120
+msgid "`http://api.gengo.com/v2/translate/jobs`"
+msgstr ""
+
+# 3fae0ed05809410b8d149164eff8553d
+#: ../../source/v2/jobs.rst:49
+msgid ""
+"In all cases, the response from should be near instant. That said, there are "
+"3 possible types of response payloads depending on the jobs that were "
+"submitted in the POST call."
+msgstr ""
+
+# 1de9efaaecdf410c8c7ace544dc5dcc7
+#: ../../source/v2/jobs.rst:53
+msgid "*All jobs are new*"
+msgstr ""
+
+# 3447433a6cdf4206996228e86ac15472
+#: ../../source/v2/jobs.rst:55
+msgid ""
+"If there are only new jobs (see lazy loading), or all jobs have the force "
+"flag, the response will have a new order id, the number of jobs and the "
+"total cost of the order if the as\\_group flag is set to true."
+msgstr ""
+
+# a1ac0882953f47b6a8190f09c32eab3a
+#: ../../source/v2/jobs.rst:64
+msgid "*All jobs are old*"
+msgstr ""
+
+# 723de88043d3469c9ae68ac942eff6b2
+#: ../../source/v2/jobs.rst:66
+msgid ""
+"If there are only 100% matching jobs (i.e. all jobs have already been "
+"ordered before and translations exist), the response is a list of the jobs, "
+"keyed the same as in the original submission. The status for these jobs will "
+"be updated as \"approved\". Notice that each index is a list, as there may "
+"be several matching jobs for a single payload if the force flag has been "
+"used in past POSTs."
+msgstr ""
+
+# 01aedb7200314914bafd0d2261af3308
+#: ../../source/v2/jobs.rst:73
+msgid ""
+"The translation is in the \"body\\_tgt\" variable. The order id will be new "
+"and the credits\\_used will be same amount, but not charged again because we "
+"have not orderd any new content."
+msgstr ""
+
+# da2afcc9165d4b119f25e547eb2b43ad
+#: ../../source/v2/jobs.rst:82
+msgid "*There are repeated jobs in the jobs payload*"
+msgstr ""
+
+# 3224837372204e55a0707a8326051185
+#: ../../source/v2/jobs.rst:84
+msgid ""
+"If there are any jobs inside a payload that are repeats of any other jobs in "
+"the same payload, the response will return the same translated text of the "
+"previous jobs that were sent."
+msgstr ""
+
+# 6e9ff7a1f977427195e501fefb07756f
+#: ../../source/v2/jobs.rst:88
+msgid ""
+"The job count will be the number of jobs sent, however the credits will only "
+"charge for one of the repeated jobs in the payload. A new order id is "
+"created for each request."
+msgstr ""
+
+# 8bc675eaea3d432199d780fda85fff37
+#: ../../source/v2/jobs.rst:97
+msgid "*Mix of new and old jobs*"
+msgstr ""
+
+# e979b08a3b0c43df8a6657c5dc747c33
+#: ../../source/v2/jobs.rst:99
+msgid ""
+"If there is a mix of previously ordered jobs (100% matching in content and "
+"language pair) and new jobs in the POST, you will get back a response that "
+"contains the old jobs, an order ID for the new jobs and total cost for the "
+"new jobs in the order."
+msgstr ""
+
+# a1b6317e52ea423f830e848e52d37851
+#: ../../source/v2/jobs.rst:104
+msgid ""
+"Please Note that the number of job\\_count will be the total number of jobs "
+"sent in your payload, not just the new ones."
+msgstr ""
+
+# 27600d2eaae94d699ef080f1384f9fc9
+#: ../../source/v2/jobs.rst:113
+msgid "Jobs (GET)"
+msgstr ""
+
+# f1a193849c2644e18e00603b43a0e0f7
+#: ../../source/v2/jobs.rst:116
+msgid ""
+"Retrieves a list of resources for the most recent jobs filtered by the given "
+"parameters."
+msgstr ""
+
+# 95a2044379554a1daab88e956b627a07
+#: ../../source/v2/jobs.rst:140
+msgid "**Note**"
+msgstr ""
+
+# 0a7d4eddf4ff47778f492f749d155256
+#: ../../source/v2/jobs.rst:136
+msgid "If you only use count, you'll get the most recent count jobs."
+msgstr ""
+
+# 447604e24f744e1e836f20bfc51e0963
+#: ../../source/v2/jobs.rst:137
+msgid ""
+"If you use count with timestamp\\_after, you'll get count jobs submitted "
+"since timestamp\\_after."
+msgstr ""
+
+# d7a6bbf2f0274945943f249fa8456e6e
+#: ../../source/v2/jobs.rst:139
+msgid ""
+"If you only use timestamp\\_after, you'll get all jobs submitted since "
+"timestamp\\_after."
+msgstr ""
+
+# 29e76016c0684d5c8ec4105c5f7db59f
+#: ../../source/v2/jobs.rst:155
+msgid "Jobs by id (GET)"
+msgstr ""
+
+# 23f86a6ebd1e466288a43ac8ab92e2fe
+#: ../../source/v2/jobs.rst:158
+msgid ""
+"Retrieves a list of jobs. They are requested by a comma-separated list of "
+"job ids."
+msgstr ""
+
+# 570df9502e5145c7a78f72f7bd1033e1
+#: ../../source/v2/jobs.rst:162
+msgid "`http://api.gengo.com/v2/translate/jobs/{ids}`"
+msgstr ""
+
+# 59d2bd13b73b471aaef05d0df4b5fb8f
+#: ../../source/v2/order.rst:2
+msgid "Order methods"
+msgstr ""
+
+# b5f8713a1d30453abef8b6993a0062aa
+#: ../../source/v2/order.rst:4
+msgid "This describes the endpoints that deal with Order on the Gengo API."
+msgstr ""
+
+# 890634d3295d4966b2b8c71495d6dc8f
+#: ../../source/v2/order.rst:11
+msgid "Order (GET)"
+msgstr ""
+
+# 11b911e4762b43e884a00cb4058f3036
+#: ../../source/v2/order.rst:14
+msgid ""
+"Retrieves a group of jobs that were previously submitted together by their "
+"order id."
+msgstr ""
+
+# 9b8db48c840b413dac56990a2ec134ee
+#: ../../source/v2/order.rst:18
+msgid "`http://api.gengo.com/v2/translate/order/{order\\_id}`"
+msgstr ""
+
+# 79d20c51466a4cffa4e44a45ddc510b4
+#: ../../source/v2/order.rst:41
+msgid "Order (DELETE)"
+msgstr ""
+
+# 973a51c6df044dd580a6b746b6a7fea3
+#: ../../source/v2/order.rst:44
+msgid ""
+"Cancels all available jobs in an order. Please keep in mind, you can only "
+"cancel a job if it has not been started already by a translator. This also "
+"cancels the order itself."
+msgstr ""
+
+# 6396bc10d7d9480db6fe0f0d4d58d22f
+#: ../../source/v2/order.rst:49
+msgid "`http://api.gengo.com/v2/translate/order/{id}`"
+msgstr ""
+
+# b4adff34816846f2b162258719436222
+#: ../../source/v2/service.rst:2
+msgid "Service methods"
+msgstr ""
+
+# b692369c3b714cb78620bcbcf104c670
+#: ../../source/v2/service.rst:4
+msgid "This describes the endpoints that deal with Service on the Gengo API."
+msgstr ""
+
+# 03e8813da8524c5889506d3db30dd7c7
+#: ../../source/v2/service.rst:11
+msgid "Language pairs (GET)"
+msgstr ""
+
+# f3e3adc650184b0d99e6936f685ee0b1
+#: ../../source/v2/service.rst:14
+msgid "Returns supported translation language pairs, tiers, and credit prices."
+msgstr ""
+
+# 1fac4e558e6f4599aa385b268b764798
+#: ../../source/v2/service.rst:18
+msgid "`http://api.gengo.com/v2/translate/service/language\\_pairs`"
+msgstr ""
+
+# 8ecea4a7807d4fa1aae075b0a0882718
+# 1313eb83d3ff439b99a62866ee91b2c5
+#: ../../source/v2/service.rst:21 ../../source/v2/service.rst:55
+msgid "Not required"
+msgstr ""
+
+# d1811ef1fd7a4bb1b88023de90880d1d
+#: ../../source/v2/service.rst:29
+msgid ""
+"lc\\_src(optional): Source language code. Submitting this will filter the "
+"response to only relevant language pairs."
+msgstr ""
+
+# ccd3b4a11b5d4db6b7ff18d9afc63669
+#: ../../source/v2/service.rst:46
+msgid "Languages (GET)"
+msgstr ""
+
+# 3af55258f82841ff9c27067b5c10efd3
+#: ../../source/v2/service.rst:49
+msgid "Returns a list of supported languages and their language codes."
+msgstr ""
+
+# 172ee947ee7c4a2f92c8d9168ba5e9b3
+#: ../../source/v2/service.rst:52
+msgid "`http://api.gengo.com/v2/translate/service/languages`"
+msgstr ""
+
+# adbfda3e12794d8e9f361be34f1b16bf
+#: ../../source/v2/service.rst:75
+msgid "Quote (POST)"
+msgstr ""
+
+# 37041615ca5f48889225f56c94e3ddf6
+#: ../../source/v2/service.rst:78
+msgid ""
+"Returns credit quote and unit count for text based on content, tier, and "
+"language pair for job or jobs submitted."
+msgstr ""
+
+# 8c6fb893ca8242639e8eaf92617c7914
+#: ../../source/v2/service.rst:82
+msgid "`http://api.gengo.com/v2/translate/service/quote`"
+msgstr ""
+
+# aeea4853916a411298c4e2f0383516e2
+#: ../../source/v2/service.rst:93
+msgid ""
+"jobs(required): An array of Job payloads, but only with the \"lc\\_src\", "
+"\"lc\\_tgt\", and \"tier\" parameters."
+msgstr ""
+
+# b7cdddc994994266abc7be52e57402e6
+#: ../../source/v2/service.rst:109
+msgid "Quote files (POST)"
+msgstr ""
+
+# 4b0dc19977184975b5eebad2953d3266
+#: ../../source/v2/service.rst:112
+msgid ""
+"Uploads files to Gengo and returns a quote for each file, with an identifier "
+"for when client is ready to place the actual order. Price quote is based on "
+"content, tier, and language pair. After using this call, use the returned "
+"identifier as a parameter in the jobs POST method to order the actual job "
+"(see Job Payloads)."
+msgstr ""
+
+# f579df7b323040f08e3195487d55422b
+#: ../../source/v2/service.rst:119
+msgid "**Note:**"
+msgstr ""
+
+# 2541689a7d8f4845a2bfd29dfa252c84
+#: ../../source/v2/service.rst:119
+msgid "When uploading files, there is a limit of 50 files per call"
+msgstr ""
+
+# 5b93a0189d044714b2467fc74da3d4d8
+#: ../../source/v2/service.rst:122
+msgid "`http://api.gengo.com/v2/translate/service/quote/file`"
+msgstr ""
