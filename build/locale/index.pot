@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksk test \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-23 08:06\n"
+"POT-Creation-Date: 2014-01-24 01:57\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,12 +17,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../../source/index.rst:6
-# c6fcfb6f3aee4f16b1b9ecf583790dbc
+# 5f804e859d0349e09604026717c462a8
 msgid "KSK gh-pages"
 msgstr ""
 
 #: ../../source/index.rst:9
-# 8e3702eea132425eb4abec775b1233c5
+# cd17672bc31f401995fb4943fba3ae30
 msgid "This is just a test for gh-pages This is just a test for gh-pages This is just a test for gh-pages This is just a test for gh-pages"
 msgstr ""
 
