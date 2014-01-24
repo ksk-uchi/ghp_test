@@ -7,10 +7,10 @@ install:
     - pip install -r requirements.txt --use-mirrors
 env:
     global:
-        - GIT_COMMITER_NAME=Travis
-        - GIT_COMMITER_EMAIL=travis@travis-ci.org
-        - GIT_AUTHOR_NAME=Travis
-        - GIT_AUTHOR_EMAIL=travis@travis-ci.org
+        - GIT_COMMITER_NAME=ksk-uchi
+        - GIT_COMMITER_EMAIL=keisuke.uchimura@gengo.com
+        - GIT_AUTHOR_NAME=ksk-uchi
+        - GIT_AUTHOR_EMAIL=keisuke.uchimura@gengo.com
 before_script:
     - secret=`openssl rsautl -decrypt -inkey ~/.ssh/id_rsa -in secret`
     - openssl aes-256-cbc -k "$secret" -in config.xml.enc -d -a -out config.xml
@@ -28,4 +28,4 @@ script:
 after_success:
     - git add .
     - git commit -m "UPDATE DOCUMENTATION BY TRAVIS"
-    - '[ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ] && [ $GH_TOKEN ] && git push -f --quiet https://${secret}@github.com/ksk-uchi/ghp_test.git gh-pages'
+    - '[ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ] && [ $secret ] && git push -f --quiet https://${secret}@github.com/ksk-uchi/ghp_test.git gh-pages'
