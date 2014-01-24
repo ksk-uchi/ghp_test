@@ -19,6 +19,7 @@ before_script:
 script:
     - make multilingual-html
     - mv build ../
+    - git stash
     - git checkout gh-pages
     - rm -rf build
     - mv ../build ./
