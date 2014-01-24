@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksk test \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-24 02:06\n"
+"POT-Creation-Date: 2014-01-24 02:39\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,12 +17,17 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../../source/index.rst:6
-# b98160ad7344464bb2ad3cd0f3551cfd
+# dbd984dd7c3f4b87aa3c439a509dc6b6
 msgid "KSK gh-pages"
 msgstr ""
 
-#: ../../source/index.rst:9
-# 910187e17b8b486da155b12b90490ee9
+#: ../../source/index.rst:8
+# e84da981cad9455091b6ea89b845c98b
+msgid "we love `gengo <http://gengo.com>`__ very much."
+msgstr ""
+
+#: ../../source/index.rst:10
+# d0d5c6362ba643f6a67e28da7f35ea02
 msgid "This is just a test for gh-pages This is just a test for gh-pages This is just a test for gh-pages This is just a test for gh-pages"
 msgstr ""
 
