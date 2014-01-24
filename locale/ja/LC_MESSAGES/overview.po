@@ -37,6 +37,12 @@ msgid ""
 "`Flickr <http://flickr.com>`__ or `Twitter <http://twitter.com>`__, you need "
 "to allow time for translators to complete their translations."
 msgstr ""
+"The Gengo API allows you to connect your app to Gengo, and order human "
+"translation without needing to use a manual web interface. Because human "
+"translation is not instant, our API is asynchronous (a bit like `メカニカル"
+"ターク <http://mturk.com>`__). This means that unlike some other web APIs like "
+"`フリッカー <http://flickr.com>`__ or `ツィッター <http://twitter.com>`__, you need "
+"to allow time for translators to complete their translations."
 
 # a89011e2aa444861bea9e6bb266ab4db
 #: ../../source/overview.rst:21
