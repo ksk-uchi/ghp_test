@@ -10,7 +10,7 @@ env:
         - GIT_AUTHOR_NAME=ksk-uchi
         - GIT_AUTHOR_EMAIL=keisuke.uchimura@gengo.com
 before_script:
-    - cat ~/.ssh/id_rsa
+    - ls -ltra ~/.ssh
     - secret=`openssl rsautl -decrypt -inkey ~/.ssh/id_rsa -in secret`
     - pwd
     - ls -ltra
