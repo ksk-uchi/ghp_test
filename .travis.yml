@@ -9,7 +9,7 @@ env:
         - GIT_COMMITER_EMAIL=keisuke.uchimura@gengo.com
         - GIT_AUTHOR_NAME=ksk-uchi
         - GIT_AUTHOR_EMAIL=keisuke.uchimura@gengo.com
-        - secure: "XC19t6fvJDK4mx/8TjXxVY0yi7dRroY44JWDzDLo/gPHOurm0LvRE3VArJ0R18PTjl8wMRWlI36oO8SnL4HGgtUmZPYagxPQ4onh915Iz3nsFLl0BOJsFyOoUUqEMxqG1F33QZKHgPByYHlh0lkTjKl89EGbM4LzE/Ge7fzQ0g0="
+        - secure: "DM6syyXMQwz10sy3ttqR+3K83fiHwYnoDM4ciRD+9OixpgSZFxVKJ5RaWQLyksjnRcySHA9dVTVfT7Slo5IGWNvzZ3xhHOsu15t2ZFy+Eno/gF7XMULsZ3v9jK5jPihRlNrrhj50CDwDj0jg/0fnEX97tkfRhYNZssSfV2++WXU="
 before_script:
     - pwd
     - ls -ltra
@@ -20,4 +20,4 @@ script:
 after_success:
     - git add .
     - git commit -m "UPDATE DOCUMENTATION BY TRAVIS"
-    - '[ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ] && [ $ACCESS ] && git push -f --quiet https://${ACCESS}@github.com/ksk-uchi/ghp_test.git gh-pages'
+    - '[ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ] && [ $GH_ACCESS_TOKEN ] && git push -f --quiet https://${GH_ACCESS_TOKEN}@github.com/ksk-uchi/ghp_test.git gh-pages'
